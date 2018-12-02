@@ -68,4 +68,6 @@ ch.harke@gmail.com"
   # should.
   system.stateVersion = "18.09"; # Did you read the comment?
 
+  # Keep the system up-to-date
+  system.autoUpgrade.enable = true;
 }
