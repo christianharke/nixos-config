@@ -6,8 +6,8 @@
 
   services.nfs.server.enable = true;
   services.nfs.server.exports = ''
-    /       *(ro,fsid=0)
-    /docker *(rw,no_root_squash,no_subtree_check,nohide)
+    /lan    172.16.0.0/16(rw,no_root_squash,no_subtree_check,nohide)
+    /dmz    172.17.0.0/16(rw,no_root_squash,no_subtree_check,nohide)
   '';
   services.nfs.server.createMountPoints = true;
 }
