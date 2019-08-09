@@ -72,6 +72,7 @@
       _1password
       firefox
       git
+      gnupg
       jq
       keychain
       libreoffice
