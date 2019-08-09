@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+# Update the nix-env dump
+DUMPFILE="path/to/nix-env.dump"
+nix-env --query --installed > "$DUMPFILE"
+git add "$DUMPFILE"
+git commit --no-verify --only "$DUMPFILE" -m "Update nix-env dump" >> /dev/null
