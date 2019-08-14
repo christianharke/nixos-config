@@ -21,8 +21,6 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  environment.pathsToLink = [ "/libexec" ];
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -31,13 +29,14 @@
     dunst
     feh
     i3-gaps
-    i3blocks-gaps
+    i3blocks
     i3lock-fancy
     libnotify
     lm_sensors
     lxappearance
     playerctl
     rofi
+    sysstat
   ];
 
   fonts.fonts = with pkgs; [
