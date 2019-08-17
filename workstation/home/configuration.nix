@@ -24,19 +24,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    acpi
-    compton
-    dunst
-    feh
-    i3-gaps
-    i3blocks
-    i3lock-fancy
-    libnotify
-    lm_sensors
-    lxappearance
-    playerctl
-    rofi
-    sysstat
   ];
 
   fonts.fonts = with pkgs; [
@@ -54,9 +41,24 @@
     enable = true;
     layout = "ch";
     libinput.enable = true; # Enable touchpad support
+    desktopManager.xterm.enable = false;
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
+      extraPackages = with pkgs; [
+        acpi
+        compton
+        dunst
+        feh
+        i3blocks
+        i3lock-fancy
+        libnotify
+        lm_sensors
+        lxappearance
+        playerctl
+        rofi
+        sysstat
+      ];
     };
   };
 
