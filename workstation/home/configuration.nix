@@ -77,10 +77,14 @@
       gnupg
       jq
       keychain
+      lazydocker
+      lazygit
       libreoffice
+      neofetch
       nixops
       ranger
       rxvt_unicode
+      screenfetch
       spotifywm
       stow
       tree
