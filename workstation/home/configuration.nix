@@ -80,6 +80,7 @@
       lazydocker
       lazygit
       libreoffice
+      mupdf
       neofetch
       nixops
       ranger
