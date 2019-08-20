@@ -97,6 +97,7 @@
       mupdf
       neofetch
       nixops
+      peek
       ranger
       rxvt_unicode
       screenfetch
