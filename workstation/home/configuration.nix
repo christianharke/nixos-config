@@ -44,7 +44,15 @@
   services.xserver = {
     enable = true;
     layout = "ch";
-    libinput.enable = true; # Enable touchpad support
+
+    # Touchpad settings
+    libinput = {
+      enable = true;
+      naturalScrolling = true;
+      disableWhileTyping = true;
+      sendEventsMode = "disabled-on-external-mouse";
+    };
+
     desktopManager.xterm.enable = false;
     windowManager.i3 = {
       enable = true;
