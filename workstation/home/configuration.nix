@@ -81,6 +81,7 @@
       gnupg
       jq
       keychain
+      killall
       lazydocker
       lazygit
       libreoffice
