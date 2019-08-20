@@ -62,6 +62,7 @@
         compton
         dunst
         feh
+        fortune
         i3blocks
         i3lock-fancy
         libnotify
