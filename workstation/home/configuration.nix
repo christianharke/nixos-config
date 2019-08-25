@@ -54,6 +54,7 @@
     };
 
     desktopManager.xterm.enable = false;
+
     windowManager.i3 = {
       enable = true;
       package = pkgs.i3-gaps;
@@ -72,6 +73,17 @@
         rofi
         sysstat
       ];
+    };
+
+    xautolock = {
+      enable = true;
+      enableNotifier = true;
+      extraOptions = [ "-detectsleep" ];
+      locker = "/run/current-system/sw/bin/i3lock-fancy";
+      notifier = ''/run/current-system/sw/bin/notify-send "Locking in 10 seconds"'';
+      notify = 10;
+      nowlocker = "/run/current-system/sw/bin/i3lock-fancy";
+      time = 10;
     };
   };
 
