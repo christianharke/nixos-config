@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
+      ../../modules/redshift.nix
     ];
 
   boot.loader.grub = {

@@ -9,6 +9,7 @@
     [
       ./hardware/default.nix
       ./projects/blueconnect.nix
+      ../../modules/redshift.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
