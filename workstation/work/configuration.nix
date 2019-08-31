@@ -188,6 +188,7 @@
       vim
       vscode
       xclip
+      xorg.xbacklight
     ];
   };
 
