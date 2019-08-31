@@ -138,6 +138,13 @@
       nowlocker = "/run/current-system/sw/bin/i3lock-pixeled";
       time = 10;
     };
+
+    serverFlagsSection = ''
+        Option "BlankTime" "15"
+        Option "StandbyTime" "15"
+        Option "SuspendTime" "15"
+        Option "OffTime" "15"
+    '';
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
