@@ -9,6 +9,7 @@
     [
       ./hardware/default.nix
       ./projects/blueconnect.nix
+      ./projects/multimed.nix
       ../../modules/common.nix
       ../../modules/desktop.nix
       ../../modules/input.nix
