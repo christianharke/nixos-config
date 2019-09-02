@@ -19,12 +19,14 @@ in
     packages = with pkgs; [
       _1password
       bat
+      bind
       file
       firefox
       gimp
       git
       gnupg
       google-chrome
+      htop
       jq
       killall
       lazydocker
