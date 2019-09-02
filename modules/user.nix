@@ -39,7 +39,6 @@ in
       peek
       pinentry
       ranger
-      screenfetch
       rdesktop
       slack
       spotifywm
