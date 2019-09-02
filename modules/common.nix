@@ -8,6 +8,7 @@
   environment = {
     variables = {
       EDITOR = "vim";
+      TERMINAL = "alacritty";
     };
   };
 

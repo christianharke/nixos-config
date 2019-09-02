@@ -6,11 +6,22 @@
       enable = true;
       fade = true;
       fadeDelta = 5;
-      fadeExclude = [ "window_type *= 'menu'" "name ~= 'Firefox$'" "focused = 1" ];
+      fadeExclude = [
+        "window_type *= 'menu'"
+      ];
       inactiveOpacity = "0.8";
-      opacityRules = [ "100:name *= 'i3lock'" "100:name *= 'rofi'" "95:class_g = 'URxvt' && !_NET_WM_STATE@:32a" "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'" ];
+      opacityRules = [
+        "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+        "100:name *= 'i3lock'"
+        "100:name *= 'rofi'"
+        "65:class_g = 'Alacritty' && focused != 1"
+        "70:class_g = 'Alacritty' && focused = 1"
+      ];
       shadow = true;
-      shadowExclude = [ "window_type *= 'menu'" "name ~= 'Firefox$'" "focused = 1" ];
+      shadowExclude = [
+        "window_type *= 'menu'"
+        "focused = 1"
+      ];
     };
 
     xserver = {

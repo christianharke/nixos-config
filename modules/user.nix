@@ -18,6 +18,7 @@ in
     openssh.authorizedKeys.keyFiles = [ keyFile ];
     packages = with pkgs; [
       _1password
+      alacritty
       bat
       bind
       file
@@ -38,7 +39,6 @@ in
       peek
       pinentry
       ranger
-      rxvt_unicode
       screenfetch
       rdesktop
       slack
