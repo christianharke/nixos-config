@@ -40,6 +40,7 @@ in
       ranger
       rxvt_unicode
       screenfetch
+      rdesktop
       slack
       spotifywm
       stow
