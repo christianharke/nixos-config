@@ -5,6 +5,8 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  boot.cleanTmpDir = true;
+
   environment = {
     variables = {
       EDITOR = "vim";
