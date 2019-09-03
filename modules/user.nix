@@ -12,7 +12,6 @@ in
     uid = 1000;
     extraGroups = [
       "wheel"
-      "vboxusers"
     ];
     initialPassword = "changeme";
     openssh.authorizedKeys.keyFiles = [ keyFile ];
