@@ -12,6 +12,7 @@
       ./projects/multimed.nix
       ../../modules/common.nix
       ../../modules/desktop.nix
+      ../../modules/docker.nix
       ../../modules/input.nix
       ../../modules/network.nix
       ../../modules/redshift.nix
