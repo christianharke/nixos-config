@@ -9,6 +9,7 @@
       ../../modules/docker.nix
       ../../modules/input.nix
       ../../modules/network.nix
+      ../../modules/printing.nix
       ../../modules/redshift.nix
       ../../modules/sound.nix
       ../../modules/user.nix
