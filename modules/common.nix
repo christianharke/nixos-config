@@ -7,10 +7,13 @@
 
   boot.cleanTmpDir = true;
 
-  environment = {
+  environment = let
+    terminal = "alacritty";
+  in {
     variables = {
       EDITOR = "vim";
-      TERMINAL = "alacritty";
+      TERMINAL = terminal;
+      TERMCMD = terminal;
     };
   };
 
