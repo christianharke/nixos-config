@@ -33,14 +33,25 @@
     ubuntu_font_family
   ];
 
-  fileSystems."/mnt/home" = {
-      device = "//bluecare-s54/homeshares$/chr";
+  fileSystems =
+  let
+    target = "/mnt/bluecare";
+    fileserver = "bluecare-s54";
+    automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+    credentials = "/home/christian/.smbcredentials";
+  in
+  {
+    "${target}/home" = {
+      device = "//${fileserver}/homeshares$/chr";
       fsType = "cifs";
-      options = let
-        # this line prevents hanging on network split
-        automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+      options = ["${automount_opts},credentials=${credentials}"];
+    };
 
-      in ["${automount_opts},credentials=/home/christian/.smbcredentials"];
+    "${target}/bc_projekte" = {
+      device = "//${fileserver}/bc_projekte$";
+      fsType = "cifs";
+      options = ["${automount_opts},credentials=${credentials}"];
+    };
   };
 
   services.openvpn.servers.bluecare = {
