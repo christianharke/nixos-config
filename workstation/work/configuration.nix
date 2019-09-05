@@ -54,6 +54,13 @@
     };
   };
 
+  environment = {
+    variables = {
+      JAVA_HOME = "${pkgs.openjdk}/lib/openjdk";
+      JDK_HOME = "${pkgs.openjdk}/lib/openjdk";
+    };
+  };
+
   services.openvpn.servers.bluecare = {
     autoStart = false;
     config = "config /home/christian/.ovpn/chr@vpfwblue.bluecare.ch.ovpn";
