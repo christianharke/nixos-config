@@ -13,6 +13,7 @@
       ../../modules/common.nix
       ../../modules/desktop.nix
       ../../modules/docker.nix
+      ../../modules/id.nix
       ../../modules/input.nix
       ../../modules/network.nix
       ../../modules/printing.nix

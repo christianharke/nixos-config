@@ -30,13 +30,6 @@
 
       desktopManager.xterm.enable = false;
 
-      displayManager = {
-        sessionCommands = ''
-          eval $(op signin my)
-          gpg-connect-agent /bye
-        '';
-      };
-
       windowManager.i3 = {
         enable = true;
         package = pkgs.i3-gaps;
