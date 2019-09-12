@@ -22,6 +22,7 @@ in
       bind
       file
       firefox
+      freerdp
       gimp
       git
       gnupg
@@ -38,7 +39,6 @@ in
       peek
       pinentry
       ranger
-      rdesktop
       slack
       spotifywm
       stow
