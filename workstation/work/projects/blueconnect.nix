@@ -10,6 +10,7 @@
 
   environment.systemPackages = with pkgs; [
     jetbrains.idea-ultimate
+    mongodb
     mongodb-tools
     nodePackages.grunt-cli
     openjdk
