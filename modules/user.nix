@@ -39,6 +39,7 @@ in
       peek
       pinentry
       ranger
+      scrot
       slack
       spotifywm
       stow
