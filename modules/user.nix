@@ -1,6 +1,7 @@
 { pkgs, config, ... }:
 
 let
+
   keyFile = builtins.toPath /home/christian/.ssh/id_rsa.pub;
   username = "christian";
 
@@ -24,6 +25,7 @@ in
       file
       firefox
       freerdp
+      gifski
       gimp
       git
       gnupg
