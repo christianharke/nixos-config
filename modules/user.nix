@@ -30,6 +30,7 @@ in
       google-chrome
       htop
       jq
+      id3lib
       killall
       lazydocker
       lazygit
