@@ -20,6 +20,7 @@ in
       alacritty
       bat
       bind
+      convmv
       file
       firefox
       freerdp
