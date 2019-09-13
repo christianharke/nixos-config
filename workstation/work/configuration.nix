@@ -38,7 +38,7 @@
   let
     target = "/mnt/bluecare";
     fileserver = "bluecare-s54";
-    automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
+    automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100";
     credentials = "/home/christian/.smbcredentials/bluecare";
   in
   {
