@@ -39,7 +39,7 @@
     target = "/mnt/bluecare";
     fileserver = "bluecare-s54";
     automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s";
-    credentials = "/home/christian/.smbcredentials";
+    credentials = "/home/christian/.smbcredentials/bluecare";
   in
   {
     "${target}/home" = {
