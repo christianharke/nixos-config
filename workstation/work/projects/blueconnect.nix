@@ -9,6 +9,9 @@
     };
 
   environment.systemPackages = with pkgs; [
+    chromedriver
+    geckodriver
+    htmlunit-driver
     jetbrains.idea-ultimate
     mongodb
     mongodb-tools
