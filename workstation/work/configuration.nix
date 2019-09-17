@@ -53,6 +53,12 @@
       fsType = "cifs";
       options = ["${automount_opts},credentials=${credentials}"];
     };
+
+    "${target}/bc_bereiche" = {
+      device = "//${fileserver}/bc_bereiche$";
+      fsType = "cifs";
+      options = ["${automount_opts},credentials=${credentials}"];
+    };
   };
 
   environment = {
