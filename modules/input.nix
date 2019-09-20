@@ -1,11 +1,23 @@
 { config, pkgs, ... }:
 
 {
-  # Touchpad settings
-  services.xserver.libinput = {
-    enable = true;
-    naturalScrolling = true;
-    disableWhileTyping = true;
-    sendEventsMode = "disabled-on-external-mouse";
+  environment.systemPackages = with pkgs; [
+    numlockx
+  ];
+
+  services.xserver = {
+    displayManager = {
+      sessionCommands = ''
+        numlockx on
+      '';
+    };
+
+    # Touchpad settings
+    libinput = {
+      enable = true;
+      naturalScrolling = true;
+      disableWhileTyping = true;
+      sendEventsMode = "disabled-on-external-mouse";
+    };
   };
 }
