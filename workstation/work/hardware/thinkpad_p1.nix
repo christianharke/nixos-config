@@ -10,7 +10,7 @@
 
   services.xserver.videoDrivers = [
     "nvidia"
-    # "displaylink" # not working in 19.03
+    "displaylink"
   ];
 
 }
