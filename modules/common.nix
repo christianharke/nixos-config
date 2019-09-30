@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  location = {
+    latitude = 47.5;
+    longitude = 8.75;
+  };
+
   time.timeZone = "Europe/Zurich";
 
   nix.gc = {
