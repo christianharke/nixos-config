@@ -9,6 +9,7 @@
     };
 
   environment.systemPackages = with pkgs; [
+    ansible
     chromedriver
     geckodriver
     htmlunit-driver
