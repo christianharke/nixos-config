@@ -38,26 +38,40 @@
   let
     target = "/mnt/bluecare";
     fileserver = "bluecare-s54";
+    fsType = "cifs";
     automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100";
     credentials = "/home/christian/.smbcredentials/bluecare";
+    options = ["${automount_opts},credentials=${credentials}"];
   in
   {
     "${target}/home" = {
       device = "//${fileserver}/homeshares$/chr";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
     };
 
     "${target}/bc_projekte" = {
       device = "//${fileserver}/bc_projekte$";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
     };
 
     "${target}/bc_bereiche" = {
       device = "//${fileserver}/bc_bereiche$";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
+    };
+
+    "${target}/ressourcenplanung" = {
+      device = "//${fileserver}/bc_fuehrung$/04a_Fuehrungskader/03_Ressourcenplanung/Public";
+      fsType = fsType;
+      options = options;
+    };
+
+    "${target}/transfer" = {
+      device = "//${fileserver}/transfer";
+      fsType = fsType;
+      options = options;
     };
   };
 
