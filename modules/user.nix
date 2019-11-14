@@ -42,6 +42,7 @@ in
       lazydocker
       lazygit
       libreoffice
+      lnav
       mupdf
       neofetch
       nixops
