@@ -22,6 +22,7 @@ in
       bat
       bind
       convmv
+      eva
       file
       firefox
       freerdp
