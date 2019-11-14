@@ -12,6 +12,7 @@
     ansible
     chromedriver
     geckodriver
+    groovy
     htmlunit-driver
     jetbrains.idea-ultimate
     mongodb
