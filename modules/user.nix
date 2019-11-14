@@ -23,9 +23,12 @@ in
       bind
       convmv
       eva
+      exa
+      fd
       file
       firefox
       freerdp
+      fzf
       gifski
       gimp
       git
@@ -44,6 +47,7 @@ in
       peek
       pinentry
       ranger
+      ripgrep
       scrot
       slack
       spotifywm
