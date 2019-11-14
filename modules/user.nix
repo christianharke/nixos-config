@@ -63,6 +63,11 @@ in
       vscode
       xclip
       xorg.xbacklight
+
+      # REPLs
+      ammonite # Scala
+      python3
+      spidermonkey # JS
     ];
   };
 
