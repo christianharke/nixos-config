@@ -34,6 +34,7 @@ in
       git
       gnupg
       google-chrome
+      gron
       htop
       jq
       id3lib
