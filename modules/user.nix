@@ -43,6 +43,7 @@ in
       lazygit
       libreoffice
       lnav
+      mdcat
       mupdf
       neofetch
       nixops
