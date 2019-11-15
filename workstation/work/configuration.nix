@@ -1,7 +1,3 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { config, pkgs, ... }:
 
 {
@@ -76,19 +72,41 @@
   };
 
   environment = {
+    systemPackages = with pkgs; [
+      calcurse
+    ];
     variables = {
       JAVA_HOME = "${pkgs.openjdk}/lib/openjdk";
       JDK_HOME = "${pkgs.openjdk}/lib/openjdk";
     };
   };
 
-  services.openvpn.servers.bluecare = {
-    autoStart = false;
-    config = "config /home/christian/.ovpn/chr@vpfwblue.bluecare.ch.ovpn";
-    updateResolvConf = true;
-  };
+  services = {
+    davmail = {
+      enable = true;
+      url = "https://mail.bluecare.ch/owa";
+      config = {
+       davmail.server = true;
+       davmail.mode = "EWS";
+       davmail.caldavPort = 1080;
+       davmail.disableUpdateCheck = true;
+       davmail.logFilePath = "/var/log/davmail/davmail.log";
+       davmail.logFileSize = "1MB";
+       log4j.logger.davmail = "WARN";
+       log4j.logger.httpclient.wire = "WARN";
+       log4j.logger.org.apache.commons.httpclient = "WARN";
+       log4j.rootLogger = "WARN";
+      };
+    };
 
-  services.xserver.dpi = 96;
+    openvpn.servers.bluecare = {
+      autoStart = false;
+      config = "config /home/christian/.ovpn/chr@vpfwblue.bluecare.ch.ovpn";
+      updateResolvConf = true;
+    };
+
+    xserver.dpi = 96;
+  };
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
