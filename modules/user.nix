@@ -8,6 +8,8 @@ let
 in
 
 {
+  programs.zsh.enable = true;
+
   users.users.${username} = {
     isNormalUser = true;
     uid = 1000;
@@ -16,6 +18,7 @@ in
     ];
     initialPassword = "changeme";
     openssh.authorizedKeys.keyFiles = [ keyFile ];
+    shell = pkgs.zsh;
     packages = with pkgs; [
       _1password
       alacritty
