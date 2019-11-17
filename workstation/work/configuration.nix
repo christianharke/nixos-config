@@ -73,7 +73,8 @@
 
   environment = {
     systemPackages = with pkgs; [
-      calcurse
+      khal
+      vdirsyncer
     ];
     variables = {
       JAVA_HOME = "${pkgs.openjdk}/lib/openjdk";
