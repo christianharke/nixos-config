@@ -2,7 +2,7 @@
 
 {
 
-  boot.kernelPackages = pkgs.linuxPackages_5_2;
+  boot.kernelPackages = pkgs.linuxPackages_5_3;
 
   hardware.enableRedistributableFirmware = true;
 
