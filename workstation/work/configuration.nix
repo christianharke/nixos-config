@@ -6,6 +6,7 @@
       ./hardware/default.nix
       ./projects/blueconnect.nix
       ./projects/multimed.nix
+      ../../modules/accounts.nix
       ../../modules/common.nix
       ../../modules/desktop.nix
       ../../modules/docker.nix
@@ -35,9 +36,10 @@
     target = "/mnt/bluecare";
     fileserver = "bluecare-s54";
     fsType = "cifs";
-    automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100";
-    credentials = "/home/christian/.smbcredentials/bluecare";
-    options = ["${automount_opts},credentials=${credentials}"];
+    acc = config.accounts."bluecare/ad";
+    automount_opts = [ "x-systemd.automount" "noauto" "x-systemd.idle-timeout=60" "x-systemd.device-timeout=5s" "x-systemd.mount-timeout=5s" ];
+    auth_opts = [ "uid=1000" "gid=100" "user=${acc.username}" "password=${acc.password}" ];
+    options = automount_opts ++ auth_opts;
   in
   {
     "${target}/home" = {

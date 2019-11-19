@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  imports =
+    [
+      ./accounts.nix
+    ];
+
   location = {
     latitude = 47.5;
     longitude = 8.75;
@@ -32,38 +37,41 @@
   let
     target = "/mnt/home";
     fileserver = "sv-syno-01";
-    automount_opts = "x-systemd.automount,noauto,x-systemd.idle-timeout=60,x-systemd.device-timeout=5s,x-systemd.mount-timeout=5s,uid=1000,gid=100";
-    credentials = "/home/christian/.smbcredentials/home";
+    fsType = "cifs";
+    acc = config.accounts.syno;
+    automount_opts = [ "x-systemd.automount" "noauto" "x-systemd.idle-timeout=60" "x-systemd.device-timeout=5s" "x-systemd.mount-timeout=5s" ];
+    auth_opts = [ "uid=1000" "gid=100" "user=${acc.username}" "password=${acc.password}" ];
+    options = automount_opts ++ auth_opts;
   in
   {
     "${target}/home" = {
       device = "//${fileserver}/home";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
     };
 
     "${target}/music" = {
       device = "//${fileserver}/music";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
     };
 
     "${target}/photo" = {
       device = "//${fileserver}/photo";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
     };
 
     "${target}/public" = {
       device = "//${fileserver}/public";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
     };
 
     "${target}/video" = {
       device = "//${fileserver}/video";
-      fsType = "cifs";
-      options = ["${automount_opts},credentials=${credentials}"];
+      fsType = fsType;
+      options = options;
     };
   };
 }
