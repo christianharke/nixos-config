@@ -75,7 +75,12 @@
   environment = {
     systemPackages = with pkgs; [
       khal
+      khard
+      mutt-with-sidebar
+      offlineimap
+      urlview
       vdirsyncer
+      w3m
     ];
     variables = {
       JAVA_HOME = "${pkgs.openjdk}/lib/openjdk";
@@ -91,6 +96,8 @@
        davmail.server = true;
        davmail.mode = "EWS";
        davmail.caldavPort = 1080;
+       davmail.imapPort = 1143;
+       davmail.smtpPort = 1025;
        davmail.disableUpdateCheck = true;
        davmail.logFilePath = "/var/log/davmail/davmail.log";
        davmail.logFileSize = "1MB";

@@ -61,6 +61,7 @@ in
       slack
       spotifywm
       stow
+      thunderbird
       tmux
       tmuxinator
       tree
