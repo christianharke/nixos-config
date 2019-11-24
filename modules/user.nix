@@ -8,7 +8,10 @@ let
 in
 
 {
-  programs.zsh.enable = true;
+  programs = {
+      vim.defaultEditor = true;
+      zsh.enable = true;
+  };
 
   users.users.${username} = {
     isNormalUser = true;
@@ -62,7 +65,6 @@ in
       tmuxinator
       tree
       unzip
-      vim
       vscode
       xclip
       xorg.xbacklight

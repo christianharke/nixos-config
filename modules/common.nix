@@ -22,7 +22,6 @@
     terminal = "alacritty";
   in {
     variables = {
-      EDITOR = "vim";
       TERMINAL = terminal;
       TERMCMD = terminal;
     };
