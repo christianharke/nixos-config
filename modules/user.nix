@@ -54,6 +54,7 @@ in
       nixops
       peek gifski
       pinentry
+      plantuml graphviz
       ranger
       ripgrep
       scrot
