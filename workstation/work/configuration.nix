@@ -74,6 +74,7 @@
 
   environment = {
     systemPackages = with pkgs; [
+      docker-ls
       khal
       khard
       mutt-with-sidebar
