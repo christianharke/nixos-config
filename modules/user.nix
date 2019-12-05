@@ -35,7 +35,6 @@ in
       firefox
       freerdp
       fzf
-      gifski
       gimp
       git
       gnupg
@@ -53,7 +52,7 @@ in
       mupdf
       neofetch
       nixops
-      peek
+      peek gifski
       pinentry
       ranger
       ripgrep
