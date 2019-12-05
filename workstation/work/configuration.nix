@@ -82,6 +82,7 @@
       urlview
       vdirsyncer
       w3m
+      zoom-us
     ];
     variables = {
       JAVA_HOME = "${pkgs.openjdk}/lib/openjdk";
