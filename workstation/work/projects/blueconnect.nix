@@ -8,6 +8,9 @@
       services.mongodb.enable = true;
     };
 
+  # E2E proxy server
+  networking.firewall.allowedTCPPorts = [ 33000 ];
+
   environment.systemPackages = with pkgs; [
     ansible
     chromedriver
