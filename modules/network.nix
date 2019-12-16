@@ -1,8 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  # TODO: enable firewall
   networking = {
+    firewall = {
+        enable = true;
+        allowPing = true;
+    };
     wireless.enable = true;
   };
 
