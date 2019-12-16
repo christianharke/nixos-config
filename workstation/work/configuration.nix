@@ -79,6 +79,7 @@
       khard
       mutt-with-sidebar
       offlineimap
+      openshift
       urlview
       vdirsyncer
       w3m
