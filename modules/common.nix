@@ -16,7 +16,10 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  boot.cleanTmpDir = true;
+  boot = {
+    cleanTmpDir = true;
+    extraModulePackages = [ config.boot.kernelPackages.exfat-nofuse ];
+  };
 
   environment = let
     terminal = "alacritty";
