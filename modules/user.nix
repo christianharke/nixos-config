@@ -2,6 +2,7 @@
 
 let
 
+  unstable = import <nixos-unstable> {};
   keyFile = builtins.toPath /home/christian/.ssh/id_rsa.pub;
   username = "christian";
 
@@ -28,7 +29,7 @@ in
       bat
       bind
       convmv
-      eva
+      unstable.eva
       exa
       fd
       file
@@ -48,7 +49,7 @@ in
       lazygit
       libreoffice
       lnav
-      mdcat
+      unstable.mdcat
       mupdf
       neofetch
       nixops

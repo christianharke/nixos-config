@@ -1,8 +1,14 @@
 { config, lib, pkgs, ... }:
 
+let
+
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
+
+in
+
 {
 
-  boot.kernelPackages = pkgs.linuxPackages_5_3;
+  boot.kernelPackages = unstable.pkgs.linuxPackages_5_3;
 
   hardware.enableRedistributableFirmware = true;
 
