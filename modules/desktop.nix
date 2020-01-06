@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+
+  fonts.fonts = with pkgs; [
+    nerdfonts
+    ubuntu_font_family
+  ];
+
   services = {
     compton = {
       enable = true;

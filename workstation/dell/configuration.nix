@@ -26,8 +26,6 @@
 
   fonts.fonts = with pkgs; [
     google-fonts
-    nerdfonts
-    ubuntu_font_family
   ];
 
   # This value determines the NixOS release with which your system is to be

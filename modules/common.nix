@@ -30,6 +30,11 @@
     };
   };
 
+  fonts = {
+    enableCoreFonts = true;
+    enableFontDir = true;
+  };
+
   fileSystems =
   let
     target = "/mnt/home";

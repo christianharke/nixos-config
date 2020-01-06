@@ -25,11 +25,6 @@
 
   networking.hostName = "n75";
 
-  fonts.fonts = with pkgs; [
-    nerdfonts
-    ubuntu_font_family
-  ];
-
   fileSystems =
   let
     target = "/mnt/bluecare";

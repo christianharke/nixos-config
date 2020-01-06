@@ -25,8 +25,6 @@
 
   fonts.fonts = with pkgs; [
     google-fonts
-    nerdfonts
-    ubuntu_font_family
   ];
 
   hardware.brightnessctl.enable = true;
