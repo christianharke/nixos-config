@@ -67,6 +67,12 @@ in
       tmuxinator
       tree
       unzip
+      (pkgs.vim_configurable.customize {
+        name = "vim";
+        vimrcConfig.packages.myplugins = with pkgs.vimPlugins; {
+          start = [ vim-nix ]; # load plugin on startup
+        };
+      })
       vscode
       xclip
       xorg.xbacklight
