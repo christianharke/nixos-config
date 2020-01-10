@@ -12,6 +12,8 @@
       '';
     };
 
+    layout = "ch";
+
     # Touchpad settings
     libinput = {
       enable = true;

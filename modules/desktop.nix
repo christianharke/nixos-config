@@ -32,7 +32,6 @@
 
     xserver = {
       enable = true;
-      layout = "ch";
 
       desktopManager.xterm.enable = false;
 
