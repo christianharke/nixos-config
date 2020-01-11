@@ -5,4 +5,7 @@
     enable = true;
     drivers = [ pkgs.hplipWithPlugin ];
   };
+  environment.systemPackages = [
+    pkgs.unpaper
+  ];
 }
