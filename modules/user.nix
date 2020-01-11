@@ -3,8 +3,8 @@
 let
 
   unstable = import <nixos-unstable> {};
-  keyFile = builtins.toPath /home/christian/.ssh/id_rsa.pub;
   username = "christian";
+  keyFile = /. + "/home/${username}/.ssh/id_rsa.pub";
 
 in
 
