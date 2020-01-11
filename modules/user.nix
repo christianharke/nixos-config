@@ -24,6 +24,4 @@ in
     openssh.authorizedKeys.keyFiles = [ keyFile ];
     shell = pkgs.zsh;
   };
-
-  security.pam.enableSSHAgentAuth = true;
 }

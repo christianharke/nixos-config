@@ -18,4 +18,6 @@
     pkgs.pinentry
   ];
 
+  security.pam.enableSSHAgentAuth = true;
+
 }
