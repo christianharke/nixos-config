@@ -10,6 +10,10 @@ in
 
   boot.kernelPackages = unstable.pkgs.linuxPackages_5_3;
 
+  software.extra = [
+    pkgs.xorg.xbacklight
+  ];
+
   hardware.enableRedistributableFirmware = true;
 
   nix.maxJobs = lib.mkOverride 20 6;

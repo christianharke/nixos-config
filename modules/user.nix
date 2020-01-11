@@ -23,65 +23,6 @@ in
     initialPassword = "changeme";
     openssh.authorizedKeys.keyFiles = [ keyFile ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      _1password
-      alacritty
-      bat
-      bind
-      convmv
-      unstable.eva
-      exa
-      fd
-      file
-      firefox
-      freerdp
-      fzf
-      gimp
-      git
-      gnupg
-      google-chrome
-      gron
-      htop
-      jq
-      id3lib
-      killall
-      lazydocker
-      lazygit
-      libreoffice
-      lnav
-      unstable.mdcat
-      mupdf
-      neofetch
-      nixops
-      peek gifski
-      pinentry
-      plantuml graphviz
-      ranger
-      ripgrep
-      scrot
-      slack
-      spotifywm
-      stow
-      thunderbird
-      tmux
-      tmuxinator
-      tree
-      unzip
-      (pkgs.vim_configurable.customize {
-        name = "vim";
-        vimrcConfig.packages.myplugins = with pkgs.vimPlugins; {
-          start = [ vim-nix ]; # load plugin on startup
-        };
-      })
-      vscode
-      xclip
-      xorg.xbacklight
-
-      # REPLs
-      ammonite # Scala
-      python3
-      spidermonkey # JS
-    ];
   };
 
   security.pam.enableSSHAgentAuth = true;
