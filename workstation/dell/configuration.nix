@@ -26,6 +26,8 @@
 
   networking.hostName = "nb-nixos-01";
 
+  services.xserver.xkbOptions = "caps:swapescape";
+
   fonts.fonts = with pkgs; [
     google-fonts
   ];

@@ -13,7 +13,6 @@
     };
 
     layout = "ch";
-    xkbOptions = "caps:swapescape";
 
     # Touchpad settings
     libinput = {

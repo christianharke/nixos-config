@@ -18,9 +18,12 @@ in
 
   nix.maxJobs = lib.mkOverride 20 6;
 
-  services.xserver.videoDrivers = [
-    "nvidia"
-    "displaylink"
-  ];
+  services.xserver = {
+    xkbOptions = "caps:swapescape";
+    videoDrivers = [
+      "nvidia"
+      "displaylink"
+    ];
+  };
 
 }
