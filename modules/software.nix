@@ -180,6 +180,7 @@ in
       default = with pkgs; [
         playonlinux
         steam
+        teamspeak_client
       ];
     };
 
