@@ -24,11 +24,13 @@ in
         fd # ultra-fast find
         file
         fzf # fuzzy find
+        git
         gnupg
         gron
         htop
         jq
         killall
+        lazygit
         neofetch
         ranger
         stow
@@ -143,11 +145,9 @@ in
       default = with pkgs; [
         ansible
         docker-ls
-        git
         freerdp
         jetbrains.idea-ultimate
         lazydocker
-        lazygit
         lnav
         unstable.mdcat
         nixops
