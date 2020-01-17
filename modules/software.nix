@@ -4,6 +4,7 @@ with pkgs.lib;
 
 let
 
+  v = import ../nixversions.nix {};
   unstable = import <nixos-unstable> {};
 
 in
@@ -151,8 +152,7 @@ in
         lnav
         unstable.mdcat
         nixops
-        openjdk
-        sbt
+        (sbt.override { stdenv = stdenv; fetchurl = fetchurl; jre = v.pkgs1903.jre8; })
         slack
         tmuxinator tmux
         visualvm

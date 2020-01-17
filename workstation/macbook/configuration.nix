@@ -9,6 +9,7 @@
       ../../modules/docker.nix
       ../../modules/id.nix
       ../../modules/input.nix
+      ../../modules/java.nix
       ../../modules/network.nix
       ../../modules/printing.nix
       ../../modules/redshift.nix

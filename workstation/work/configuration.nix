@@ -11,6 +11,7 @@
       ../../modules/docker.nix
       ../../modules/id.nix
       ../../modules/input.nix
+      ../../modules/java.nix
       ../../modules/network.nix
       ../../modules/printing.nix
       ../../modules/redshift.nix
@@ -66,11 +67,6 @@
       fsType = fsType;
       options = options;
     };
-  };
-
-  environment.variables = {
-    JAVA_HOME = "${pkgs.openjdk}/lib/openjdk";
-    JDK_HOME = "${pkgs.openjdk}/lib/openjdk";
   };
 
   software = {
