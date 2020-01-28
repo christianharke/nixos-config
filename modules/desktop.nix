@@ -8,6 +8,8 @@
   ];
 
   services = {
+    autorandr.enable = true;
+
     compton = {
       enable = true;
       fade = true;
