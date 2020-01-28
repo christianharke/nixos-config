@@ -146,6 +146,7 @@ in
       default = with pkgs; [
         ansible
         docker-ls
+        unstable.elmPackages.elm
         freerdp
         jetbrains.idea-ultimate
         lazydocker
