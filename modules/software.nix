@@ -124,6 +124,7 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         id3lib
+        mpv
         spotifywm
       ];
     };
