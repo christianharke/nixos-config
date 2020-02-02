@@ -33,7 +33,7 @@ in
         killall
         lazygit
         neofetch
-        ranger
+        unstable.ranger
         stow
         unzip
         (vim_configurable.customize {
