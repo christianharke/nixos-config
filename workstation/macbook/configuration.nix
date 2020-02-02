@@ -25,11 +25,6 @@
     google-fonts
   ];
 
-  hardware.brightnessctl.enable = true;
-  environment.systemPackages = with pkgs; [
-    acpilight
-  ];
-
   services.xserver.dpi = 150;
 
   # This value determines the NixOS release with which your system is to be
