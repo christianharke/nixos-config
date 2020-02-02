@@ -25,7 +25,7 @@
     google-fonts
   ];
 
-  services.xserver.dpi = 150;
+  services.xserver.xkbOptions = "caps:swapescape";
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database

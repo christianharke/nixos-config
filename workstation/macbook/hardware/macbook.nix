@@ -6,9 +6,9 @@
   ];
 
   services.xserver = {
-      xkbModel = "apple";
-      xkbVariant = "de_mac";
-      xkbOptions = "caps:swapescape";
+    dpi = 150;
+    xkbModel = "apple";
+    xkbVariant = "de_mac";
   };
 
   nix.maxJobs = lib.mkOverride 20 4;

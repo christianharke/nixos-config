@@ -103,7 +103,7 @@
       updateResolvConf = true;
     };
 
-    xserver.dpi = 96;
+    xserver.xkbOptions = "caps:swapescape";
   };
 
   # This value determines the NixOS release with which your system is to be
