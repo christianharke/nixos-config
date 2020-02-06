@@ -95,6 +95,14 @@ in
               " Easily create HTML unorded lists.
               map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
               map <F4> <Esc>o<li></li><Esc>cit
+
+              " Configure the default file browser
+              " see: https://shapeshed.com/vim-netrw/#changing-the-directory-view-in-netrw
+              let g:netrw_liststyle = 3
+              let g:netrw_banner = 0
+              let g:netrw_browse_split = 4
+              let g:netrw_altv = 1
+              let g:netrw_winsize = 18
             '';
           };
         })
