@@ -5,6 +5,10 @@
     <nixos-hardware/apple/macbook-pro/10-1>
   ];
 
+  boot.kernelParams = [
+    "hid_apple.fnmode=2"
+  ];
+
   services.xserver = {
     dpi = 150;
     xkbModel = "apple";
