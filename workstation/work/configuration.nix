@@ -1,11 +1,18 @@
 { config, pkgs, ... }:
 
+let
+
+   acc = config.accounts."bluecare/ad";
+
+in
+
 {
   imports =
     [
       ./hardware/default.nix
       ./projects/blueconnect.nix
       ./projects/multimed.nix
+      ../../modules/accounts.nix
       ../../modules/common.nix
       ../../modules/desktop.nix
       ../../modules/docker.nix
@@ -69,6 +76,34 @@
     };
   };
 
+  hardware.printers =
+  let
+    credentials = "${acc.domain}\\${acc.username}:${acc.password}";
+    printserver = "bluecare-s20";
+    location = "BlueCare";
+    description = "Kyocera TASKalfa 300ci";
+    model = "Kyocera/Kyocera_TASKalfa_300ci.ppd";
+  in
+  {
+    ensurePrinters = [
+      {
+        name = "FollowMe";
+        location = location;
+        description = description;
+        deviceUri = "smb://${credentials}@${printserver}/FollowMe";
+        model = model;
+      }
+      {
+        name = "FollowMe_Color";
+        location = location;
+        description = "${description} Color";
+        deviceUri = "smb://${credentials}@${printserver}/FollowMe%20Color";
+        model = model;
+      }
+    ];
+    ensureDefaultPrinter = "FollowMe";
+  };
+
   software = {
     gaming = [];
     extra = with pkgs; [
@@ -102,6 +137,8 @@
       config = "config /home/christian/.accounts/bluecare/ovpn/chr@vpfwblue.bluecare.ch.ovpn";
       updateResolvConf = true;
     };
+
+    printing.drivers = [ pkgs.cups-kyodialog3 ];
 
     xserver.xkbOptions = "caps:swapescape";
   };
