@@ -47,8 +47,14 @@
           feh
           fortune
           i3blocks
-          i3lock-fancy
-          i3lock-pixeled
+          (i3lock-pixeled.overrideAttrs (oldAttrs: rec {
+            src = fetchFromGitLab {
+              owner = "christianharke";
+              repo = "i3lock-pixeled";
+              rev = "take-new-screenshot-each-time";
+              sha256 = "1z342m2a68acy4pk4kqc3fv1spkd0fc40rq39rc6vdpqx2rcm846";
+            };
+          }))
           libnotify
           lm_sensors
           lxappearance
