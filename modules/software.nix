@@ -19,6 +19,7 @@ in
         _1password
         bat
         bind
+        broot
         convmv
         unstable.eva
         exa
