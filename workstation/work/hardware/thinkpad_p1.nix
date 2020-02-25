@@ -14,7 +14,10 @@ in
     pkgs.xorg.xbacklight
   ];
 
-  hardware.enableRedistributableFirmware = true;
+  hardware = {
+    cpu.intel.updateMicrocode = true;
+    enableRedistributableFirmware = true;
+  };
 
   nix.maxJobs = lib.mkOverride 20 6;
 
