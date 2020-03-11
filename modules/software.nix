@@ -180,8 +180,9 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         khal khard vdirsyncer
-        mutt-with-sidebar offlineimap urlview w3m
         libreoffice
+        mutt-with-sidebar offlineimap urlview w3m
+        nextcloud-client
         sent # plaintext presentations
       ];
     };
