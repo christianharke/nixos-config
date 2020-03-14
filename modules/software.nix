@@ -190,6 +190,7 @@ in
     gaming = mkOption {
       type = types.listOf types.package;
       default = with pkgs; [
+        discord
         playonlinux
         steam
         teamspeak_client
