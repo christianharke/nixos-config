@@ -25,7 +25,10 @@
     device = "/dev/sda"; # or "nodev" for efi only
   };
 
-  networking.hostName = "nb-nixos-01";
+  networking = {
+    hostName = "nb-nixos-01";
+    wireless.enable = true;
+  }
 
   services.xserver.xkbOptions = "caps:swapescape";
 

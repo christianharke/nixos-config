@@ -19,6 +19,8 @@ in
     enableRedistributableFirmware = true;
   };
 
+  networking.wireless.enable = true;
+
   nix.maxJobs = lib.mkOverride 20 6;
 
   services.xserver = {

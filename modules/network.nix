@@ -1,12 +1,9 @@
 { config, pkgs, ... }:
 
 {
-  networking = {
-    firewall = {
-        enable = true;
-        allowPing = true;
-    };
-    wireless.enable = true;
+  networking.firewall = {
+      enable = true;
+      allowPing = true;
   };
 
   # Enable the OpenSSH daemon.

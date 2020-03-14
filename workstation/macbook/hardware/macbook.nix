@@ -9,6 +9,8 @@
     "hid_apple.fnmode=2"
   ];
 
+  networking.wireless.enable = true;
+
   services.xserver = {
     dpi = 150;
     xkbModel = "apple";
