@@ -18,7 +18,7 @@ in
     isNormalUser = true;
     uid = 1000;
     extraGroups = [
-      "wheel" "scanner"
+      "wheel" "audio" "scanner"
     ];
     initialPassword = "changeme";
     openssh.authorizedKeys.keyFiles = [ keyFile ];
