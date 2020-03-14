@@ -9,4 +9,5 @@
       package = pkgs.pulseaudioFull;
     };
   };
+  environment.systemPackages = [ pkgs.pavucontrol ];
 }
