@@ -126,6 +126,7 @@ in
       default = with pkgs; [
         gimp
         plantuml graphviz
+        sxiv
       ];
     };
 
