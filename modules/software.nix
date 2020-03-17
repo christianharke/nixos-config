@@ -5,7 +5,7 @@ with pkgs.lib;
 let
 
   v = import ../nixversions.nix {};
-  unstable = import <nixos-unstable> {};
+  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 
 in
 
@@ -166,6 +166,7 @@ in
         nixops
         (sbt.override { stdenv = stdenv; fetchurl = fetchurl; jre = v.pkgs1903.jre8; })
         slack
+        unstable.teams
         tmuxinator tmux
         visualvm
         vscode
