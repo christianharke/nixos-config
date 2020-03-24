@@ -11,10 +11,15 @@
 
   networking.wireless.enable = true;
 
-  services.xserver = {
-    dpi = 150;
-    xkbModel = "apple";
-    xkbVariant = "de_mac";
+  services = {
+
+    upower.enable = true;
+
+    xserver = {
+      dpi = 150;
+      xkbModel = "apple";
+      xkbVariant = "de_mac";
+    };
   };
 
   nix.maxJobs = lib.mkOverride 20 4;
