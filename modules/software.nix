@@ -41,7 +41,8 @@ in
           name = "vim";
           vimrcConfig = {
             packages.myplugins = with pkgs.vimPlugins; {
-              start = [ vim-nix ]; # load plugin on startup
+              start = [ ranger-vim vim-css-color vimwiki ]; # load plugin on startup
+              opt = [ elm-vim vim-nix ];
             };
             customRC = ''
               " Save 1,000 items in history
@@ -97,13 +98,33 @@ in
               map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
               map <F4> <Esc>o<li></li><Esc>cit
 
-              " Configure the default file browser
-              " see: https://shapeshed.com/vim-netrw/#changing-the-directory-view-in-netrw
-              let g:netrw_liststyle = 3
-              let g:netrw_banner = 0
-              let g:netrw_browse_split = 4
-              let g:netrw_altv = 1
-              let g:netrw_winsize = 18
+
+              "
+              " PLUGINS
+              "
+
+              " ranger config
+              map <leader>rr :RangerEdit<cr>
+              map <leader>rv :RangerVSplit<cr>
+              map <leader>rs :RangerSplit<cr>
+              map <leader>rt :RangerTab<cr>
+              map <leader>ri :RangerInsert<cr>
+              map <leader>ra :RangerAppend<cr>
+              map <leader>rc :set operatorfunc=RangerChangeOperator<cr>g@
+              map <leader>rd :RangerCD<cr>
+              map <leader>rld :RangerLCD<cr>
+
+              " vimwiki config
+              set nocompatible
+              filetype plugin on
+              syntax on
+              let nextcloud_notes = {}
+              let nextcloud_notes.path = '~/Nextcloud/Notes/'
+              let nextcloud_notes.syntax = 'markdown'
+              let nextcloud_notes.ext = 'txt'
+              let nextcloud_notes.list_margin = 0
+              let g:vimwiki_list = [nextcloud_notes]
+              let g:vimwiki_dir_link = 'index'
             '';
           };
         })
