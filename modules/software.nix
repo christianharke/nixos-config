@@ -188,7 +188,7 @@ in
         (sbt.override { stdenv = stdenv; fetchurl = fetchurl; jre = v.pkgs1903.jre8; })
         slack
         unstable.teams
-        tmuxinator tmux
+        unstable.tmuxinator unstable.tmux
         visualvm
         vscode
 
