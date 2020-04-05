@@ -16,6 +16,16 @@ in
     common = mkOption {
       type = types.listOf types.package;
       default = with pkgs; [
+        # Terminal fun
+        asciiquarium
+        bb
+        cowsay
+        cmatrix
+        figlet
+        fortune
+        lolcat
+        toilet
+
         _1password
         bat
         bind
