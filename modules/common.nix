@@ -21,6 +21,10 @@
     extraModulePackages = [ config.boot.kernelPackages.exfat-nofuse ];
   };
 
+  security.sudo.extraConfig = ''
+    Defaults insults
+  '';
+
   environment = let
     terminal = "alacritty";
   in {
