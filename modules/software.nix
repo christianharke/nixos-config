@@ -187,6 +187,7 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         ansible
+        ascii
         docker-ls
         unstable.elmPackages.elm
         freerdp
