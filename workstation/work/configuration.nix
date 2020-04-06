@@ -63,6 +63,12 @@ in
       options = options;
     };
 
+    "${target}/bluecare" = {
+      device = "//${fileserver}/bluecare$";
+      fsType = fsType;
+      options = options;
+    };
+
     "${target}/ressourcenplanung" = {
       device = "//${fileserver}/bc_fuehrung$/04a_Fuehrungskader/03_Ressourcenplanung/Public";
       fsType = fsType;
