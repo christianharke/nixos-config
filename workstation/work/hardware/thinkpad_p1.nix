@@ -1,14 +1,8 @@
 { config, lib, pkgs, ... }:
 
-let
-
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-
-in
-
 {
 
-  boot.kernelPackages = unstable.pkgs.linuxPackages_5_3;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   software.extra = [
     pkgs.xorg.xbacklight
@@ -27,7 +21,7 @@ in
     dpi = 96;
     videoDrivers = [
       "nvidia"
-      "displaylink"
+      #"displaylink"
     ];
   };
 
