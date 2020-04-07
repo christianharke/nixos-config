@@ -45,6 +45,7 @@ in
         lazygit
         neofetch
         unstable.ranger
+        samba
         stow
         unzip
         (vim_configurable.customize {
