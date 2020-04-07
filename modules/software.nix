@@ -176,6 +176,7 @@ in
       default = with pkgs; [
         firefox
         google-chrome
+        qutebrowser
         thunderbird
 
         # Messengers
