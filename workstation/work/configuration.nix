@@ -26,6 +26,7 @@ in
       ../../modules/sound.nix
       ../../modules/user.nix
       ../../modules/virtualbox.nix
+      ../../modules/vpn.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

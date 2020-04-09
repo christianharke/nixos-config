@@ -18,6 +18,7 @@
       ../../modules/sound.nix
       ../../modules/user.nix
       ../../modules/virtualbox.nix
+      ../../modules/vpn.nix
     ];
 
   networking.hostName = "beteigeuze";
