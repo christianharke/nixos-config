@@ -2,19 +2,20 @@
 
 let
 
-  v = import ../nixversions.nix config;
+  unstable = import <nixos-unstable> {};
+  java8 = unstable.openjdk8;
   
 in
 
 {
   environment = {
     systemPackages = [
-      v.pkgs1903.openjdk8
+      java8
     ];
 
     variables = {
-      JAVA_HOME = "${v.pkgs1903.openjdk8}/lib/openjdk";
-      JDK_HOME = "${v.pkgs1903.openjdk8}/lib/openjdk";
+      JAVA_HOME = "${java8}/lib/openjdk";
+      JDK_HOME = "${java8}/lib/openjdk";
     };
   };
 
