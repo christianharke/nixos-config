@@ -27,6 +27,7 @@ in
       ../../modules/user.nix
       ../../modules/virtualbox.nix
       ../../modules/vpn.nix
+      ../../projects/jbert.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
