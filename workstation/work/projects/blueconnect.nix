@@ -8,6 +8,11 @@ in
 
 {
 
+  imports =
+    [
+      ../../../modules/java.nix
+    ];
+
   containers.mongodb.config =
     { config, pkgs, ... }:
     {
@@ -27,10 +32,9 @@ in
     mongodb
     mongodb-tools
     nodePackages.grunt-cli
-    openjdk
     robo3t
     sbt
     tesseract4
   ];
-
 }
+
