@@ -227,7 +227,7 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         discord
-        playonlinux
+        lutris
         steam
         teamspeak_client
       ];
