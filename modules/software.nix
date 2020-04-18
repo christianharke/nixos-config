@@ -218,7 +218,7 @@ in
         khal khard vdirsyncer
         libreoffice
         mutt-with-sidebar offlineimap urlview w3m
-        unstable.nextcloud-client
+        nextcloud-client
         sent # plaintext presentations
       ];
     };
