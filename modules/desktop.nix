@@ -7,6 +7,24 @@
     ubuntu_font_family
   ];
 
+  environment.systemPackages = with pkgs; [
+    acpi
+    dmenu
+    dunst libnotify
+    feh
+    (i3lock-pixeled.overrideAttrs (oldAttrs: rec {
+      src = fetchFromGitLab {
+        owner = "christianharke";
+        repo = "i3lock-pixeled";
+        rev = "take-new-screenshot-each-time";
+        sha256 = "1z342m2a68acy4pk4kqc3fv1spkd0fc40rq39rc6vdpqx2rcm846";
+      };
+    }))
+    lm_sensors
+    lxappearance
+    rofi # Necessary for fontawesome/unicode symbol finder
+  ];
+
   services = {
     autorandr.enable = true;
 
@@ -17,18 +35,18 @@
       fadeExclude = [
         "window_type *= 'menu'"
       ];
-      inactiveOpacity = "0.8";
+      inactiveOpacity = "0.9";
       opacityRules = [
-        "0:_NET_WM_STATE@:32a *= '_NET_WM_STATE_HIDDEN'"
+        "100:_NET_WM_STATE@:32a ~= '_NET_WM_STATE_MAXIMIZED_*'"
+        "100:_NET_WM_STATE@:32a *= '_NET_WM_STATE_FULLSCREEN'"
+        "100:fullscreen"
+        "100:class_g = 'dmenu'"
         "100:name *= 'i3lock'"
-        "100:name *= 'rofi'"
-        "65:class_g = 'Alacritty' && focused != 1"
-        "70:class_g = 'Alacritty' && focused = 1"
+        "95:class_g = 'Alacritty' && focused"
       ];
       shadow = true;
       shadowExclude = [
         "window_type *= 'menu'"
-        "focused = 1"
       ];
     };
 
@@ -36,32 +54,11 @@
       enable = true;
 
       desktopManager.xterm.enable = false;
-
-      windowManager.i3 = {
-        enable = true;
-        package = pkgs.i3-gaps;
-        extraPackages = with pkgs; [
-          acpi
-          compton
-          dunst
-          feh
-          fortune
-          i3blocks
-          (i3lock-pixeled.overrideAttrs (oldAttrs: rec {
-            src = fetchFromGitLab {
-              owner = "christianharke";
-              repo = "i3lock-pixeled";
-              rev = "take-new-screenshot-each-time";
-              sha256 = "1z342m2a68acy4pk4kqc3fv1spkd0fc40rq39rc6vdpqx2rcm846";
-            };
-          }))
-          libnotify
-          lm_sensors
-          lxappearance
-          playerctl
-          rofi
-          sysstat
-        ];
+      windowManager.spectrwm.enable = true;
+      displayManager = {
+        sessionCommands = ''
+          feh --bg-center --randomize /home/christian/Pictures/wallpapers
+        '';
       };
 
       xautolock = {

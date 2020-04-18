@@ -20,6 +20,7 @@ in
       ../../modules/input.nix
       ../../modules/java.nix
       ../../modules/network.nix
+      ../../modules/packages.nix
       ../../modules/printing.nix
       ../../modules/redshift.nix
       ../../modules/software.nix
