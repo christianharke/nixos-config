@@ -10,6 +10,7 @@
       ../../modules/input.nix
       ../../modules/java.nix
       ../../modules/network.nix
+      ../../modules/nextcloud.nix
       ../../modules/printing.nix
       ../../modules/software.nix
       ../../modules/sound.nix

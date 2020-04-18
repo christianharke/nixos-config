@@ -215,10 +215,7 @@ in
     office = mkOption {
       type = types.listOf types.package;
       default = with pkgs; [
-        khal khard vdirsyncer
         libreoffice
-        mutt-with-sidebar offlineimap urlview w3m
-        nextcloud-client
         sent # plaintext presentations
       ];
     };

@@ -13,6 +13,7 @@ in
       ./projects/blueconnect.nix
       ./projects/multimed.nix
       ../../modules/accounts.nix
+      ../../modules/cli-office.nix
       ../../modules/common.nix
       ../../modules/desktop.nix
       ../../modules/docker.nix
@@ -20,6 +21,7 @@ in
       ../../modules/input.nix
       ../../modules/java.nix
       ../../modules/network.nix
+      ../../modules/nextcloud.nix
       ../../modules/packages.nix
       ../../modules/printing.nix
       ../../modules/redshift.nix

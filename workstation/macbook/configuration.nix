@@ -11,6 +11,7 @@
       ../../modules/input.nix
       ../../modules/java.nix
       ../../modules/network.nix
+      ../../modules/nextcloud.nix
       ../../modules/nspawn.nix
       ../../modules/printing.nix
       ../../modules/redshift.nix
