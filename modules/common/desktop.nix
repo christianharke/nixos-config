@@ -12,14 +12,7 @@
     dmenu
     dunst libnotify
     feh
-    (i3lock-pixeled.overrideAttrs (oldAttrs: rec {
-      src = fetchFromGitLab {
-        owner = "christianharke";
-        repo = "i3lock-pixeled";
-        rev = "take-new-screenshot-each-time";
-        sha256 = "1z342m2a68acy4pk4kqc3fv1spkd0fc40rq39rc6vdpqx2rcm846";
-      };
-    }))
+    i3lock-pixeled
     lm_sensors
     lxappearance
     rofi # Necessary for fontawesome/unicode symbol finder
