@@ -4,7 +4,7 @@ with pkgs.lib;
 
 let
 
-  v = import ../nixversions.nix {};
+  v = import ../../nixversions.nix {};
   unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 
 in
