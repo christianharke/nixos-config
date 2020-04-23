@@ -105,6 +105,36 @@ in
               set shiftwidth=4
               set tabstop=4
 
+              "
+              " KEYMAPS
+              "
+
+              " Open terminal inside vim
+              map <Leader>tt :terminal<CR>
+              map <Leader>tv :vertical terminal<CR>
+
+              " Splits and tabbed files
+              set splitbelow splitright
+
+              " Remap splits navigation to just CTRL + hjkl
+              nnoremap <C-h> <C-w>h
+              nnoremap <C-j> <C-w>j
+              nnoremap <C-k> <C-w>k
+              nnoremap <C-l> <C-w>l
+
+              " Make adjusing split sizes a bit more friendly
+              noremap <silent> <C-Left> :vertical resize +3<CR>
+              noremap <silent> <C-Right> :vertical resize -3<CR>
+              noremap <silent> <C-Up> :resize +3<CR>
+              noremap <silent> <C-Down> :resize -3<CR>
+
+              " Change 2 split windows from vert to horiz or horiz to vert
+              map <Leader>th <C-w>t<C-w>H
+              map <Leader>tk <C-w>t<C-w>K
+
+              " Removes pipes | that act as seperators on splits
+              set fillchars+=vert:\ 
+
               " Easily create HTML unorded lists.
               map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
               map <F4> <Esc>o<li></li><Esc>cit
@@ -114,7 +144,7 @@ in
               " PLUGINS
               "
 
-              " ranger config
+              " ranger
               map <leader>rr :RangerEdit<cr>
               map <leader>rv :RangerVSplit<cr>
               map <leader>rs :RangerSplit<cr>
@@ -125,7 +155,7 @@ in
               map <leader>rd :RangerCD<cr>
               map <leader>rld :RangerLCD<cr>
 
-              " vimwiki config
+              " vimwiki
               set nocompatible
               filetype plugin on
               syntax on
