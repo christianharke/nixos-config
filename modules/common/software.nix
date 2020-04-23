@@ -196,7 +196,6 @@ in
         jetbrains.idea-ultimate
         lazydocker
         lnav
-        unstable.mdcat
         nixops
         (sbt.override { stdenv = stdenv; fetchurl = fetchurl; jre = v.pkgs1903.jre8; })
         slack
