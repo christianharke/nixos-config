@@ -1,1 +1,6 @@
 accounts.nix
+
+*.tgz
+*.tar
+*.tar.gz
+*.zip
