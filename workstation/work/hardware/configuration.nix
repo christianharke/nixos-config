@@ -11,13 +11,10 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  boot.initrd.luks.devices = [
-    {
-      name = "root";
-      device = "/dev/nvme0n1p2";
-      preLVM = true;
-    }
-  ];
+  boot.initrd.luks.devices.root = {
+    device = "/dev/nvme0n1p2";
+    preLVM = true;
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/11165519-d1be-4447-b609-1e440bd9072e";

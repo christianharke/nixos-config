@@ -26,12 +26,12 @@ in
         lolcat
         toilet
 
-        unstable._1password
+        _1password
         bat
         bind
         broot
         convmv
-        unstable.eva
+        eva
         exa
         fd # ultra-fast find
         file
@@ -44,7 +44,7 @@ in
         killall
         lazygit
         neofetch
-        unstable.ranger
+        ranger
         samba
         stow
         unzip
@@ -176,7 +176,7 @@ in
       default = with pkgs; [
         firefox
         google-chrome
-        qutebrowser
+        #qutebrowser # removed because of broken dependency
         thunderbird
 
         # Messengers
@@ -191,16 +191,16 @@ in
         ansible
         ascii
         docker-ls
-        unstable.elmPackages.elm
+        elmPackages.elm
         freerdp
         jetbrains.idea-ultimate
         lazydocker
         lnav
         nixops
-        (sbt.override { stdenv = stdenv; fetchurl = fetchurl; jre = v.pkgs1903.jre8; })
+        sbt
         slack
-        unstable.teams
-        unstable.tmuxinator unstable.tmux
+        teams
+        tmuxinator tmux
         visualvm
         vscode
 

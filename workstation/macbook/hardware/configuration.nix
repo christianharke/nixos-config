@@ -13,13 +13,10 @@
   boot.kernelModules = [ "kvm-intel" "wl" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.broadcom_sta ];
 
-  boot.initrd.luks.devices = [
-    {
-      name = "root";
-      device = "/dev/sda2";
-      preLVM = true;
-    }
-  ];
+  boot.initrd.luks.devices.root = {
+    device = "/dev/sda2";
+    preLVM = true;
+  };
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/15895546-3cc4-4b0d-a97c-7153e157ce01";
@@ -38,5 +35,5 @@
   nix.maxJobs = lib.mkDefault 8;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   # High-DPI console
-  i18n.consoleFont = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  console.font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
 }

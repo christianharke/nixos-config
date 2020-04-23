@@ -2,7 +2,6 @@
 
 let
 
-  unstable = import <nixos-unstable> {};
   username = "christian";
   keyFile = /. + "/home/${username}/.ssh/id_rsa.pub";
 

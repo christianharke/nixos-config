@@ -2,8 +2,6 @@
 
 {
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   software.extra = [
     pkgs.xorg.xbacklight
   ];
@@ -21,7 +19,7 @@
     dpi = 96;
     videoDrivers = [
       "nvidia"
-      #"displaylink"
+      "displaylink"
     ];
   };
 

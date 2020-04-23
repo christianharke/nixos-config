@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 
-let
-
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-
-in
-
 {
   imports =
     [
@@ -27,8 +21,8 @@ in
     cantata
     gradle
     jetbrains.idea-ultimate
+    micronaut
     mpc_cli
-    unstable.micronaut
   ];
 }
 

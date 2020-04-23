@@ -28,6 +28,7 @@
   environment = let
     terminal = "alacritty";
   in {
+    homeBinInPath = true;
     variables = {
       TERMINAL = terminal;
       TERMCMD = terminal;
@@ -35,7 +36,7 @@
   };
 
   fonts = {
-    enableCoreFonts = true;
+    fonts = [ pkgs.corefonts ];
     enableFontDir = true;
   };
 
@@ -80,4 +81,10 @@
       options = options;
     };
   };
+
+  # This value determines the NixOS release with which your system is to be
+  # compatible, in order to avoid breaking some software such as database
+  # servers. You should change this only after NixOS release notes say you
+  # should.
+  system.stateVersion = "20.03"; # Did you read the comment?
 }

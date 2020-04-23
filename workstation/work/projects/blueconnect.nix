@@ -1,11 +1,5 @@
 { config, pkgs, ... }:
 
-let
-
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
-
-in
-
 {
 
   imports =
@@ -16,6 +10,7 @@ in
   containers.mongodb.config =
     { config, pkgs, ... }:
     {
+      nixpkgs.config.allowUnfree = true;
       services.mongodb.enable = true;
     };
 
@@ -24,7 +19,7 @@ in
 
   environment.systemPackages = with pkgs; [
     ansible
-    unstable.chromedriver
+    chromedriver
     geckodriver
     groovy
     htmlunit-driver
