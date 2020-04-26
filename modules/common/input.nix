@@ -8,6 +8,9 @@
 
   services.xserver = {
     displayManager = {
+      setupCommands = ''
+        /run/current-system/sw/bin/numlockx on
+      '';
       sessionCommands = ''
         numlockx on
         xbindkeys
