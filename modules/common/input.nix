@@ -3,12 +3,14 @@
 {
   environment.systemPackages = with pkgs; [
     numlockx
+    xbindkeys
   ];
 
   services.xserver = {
     displayManager = {
       sessionCommands = ''
         numlockx on
+        xbindkeys
       '';
     };
 
