@@ -1,41 +1,32 @@
-{ stdenv
-, fetchgit
-, coreutils
-, pkg-config
-, xorg
-, xcb-util-cursor
-}:
+{ stdenv, fetchFromGitHub, pkgconfig, xorg }:
 
-stdenv.mkDerivation rec {
-  name = "spectrwm-${version}";
+stdenv.mkDerivation {
+  pname = "spectrwm";
   version = "3.3.0";
 
-  src = fetchgit {
+  src = fetchFromGitHub {
+    owner = "conformal";
+    repo = "spectrwm";
     rev = "SPECTRWM_3_3_0";
-    url = "https://github.com/conformal/spectrwm";
-    sha256 = "1dzivf587sk79y3jz6xxmxlccma6plqq101yib6g9pq3prsxp8g9";
+    sha256 = "139mswlr0z5dbp5migm98qqg84syq0py1qladp3226xy6q3bnn08";
   };
 
-
-  buildInputs = [
-    pkg-config
-    xcb-util-cursor
-    xorg.libX11
-    xorg.libxcb
-    xorg.libXrandr
-    xorg.libXcursor
-    xorg.libXft
-    xorg.libXt
-    xorg.xcbutil
-    xorg.xcbutilkeysyms
-    xorg.xcbutilwm
+  nativeBuildInputs = [ pkgconfig ];
+  buildInputs = with xorg; [
+    libXrandr
+    libXcursor
+    libXft
+    libXt
+    xcbutil
+    xcbutilkeysyms
+    xcbutilwm
   ];
 
-  postUnpack = ''
-    export sourceRoot=$sourceRoot/linux
-  '';
-  makeFlags="PREFIX=${placeholder "out"}";
-  installPhase = "make install $makeFlags";
+  sourceRoot = let
+    subdir = if stdenv.isDarwin then "osx" else "linux";
+  in "source/${subdir}";
+
+  makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
   meta = with stdenv.lib; {
     description = "A tiling window manager";
