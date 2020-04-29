@@ -11,6 +11,8 @@
 
   networking.wireless.enable = true;
 
+  programs.kbdlight.enable = true;
+
   services = {
 
     upower.enable = true;
