@@ -135,11 +135,17 @@ in
 
     printing.drivers = [ pkgs.cups-kyodialog3 ];
 
-    xserver.xkbOptions = "caps:swapescape";
+    xserver = {
+      displayManager.lightdm.greeters.mini = {
+        enable = true;
+        user = "christian";
+      };
+      xkbOptions = "caps:swapescape";
+    };
   };
 
   containers.devmail =
-  { config = {config ,pkgs, ... }:
+  { config = { config, pkgs, ... }:
       { imports = [ ../../modules/devmail.nix ];
         services.devmail = {
           enable = true;

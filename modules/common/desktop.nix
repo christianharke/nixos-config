@@ -48,15 +48,9 @@
 
       desktopManager.xterm.enable = false;
       windowManager.spectrwm.enable = true;
-      displayManager = {
-        lightdm.greeters.mini = {
-          enable = true;
-          user = "christian";
-        };
-        sessionCommands = ''
-          feh --bg-center --randomize /home/christian/Pictures/wallpapers
-        '';
-      };
+      displayManager.sessionCommands = ''
+        feh --bg-center --randomize /home/christian/Pictures/wallpapers
+      '';
 
       xautolock = {
         enable = true;
