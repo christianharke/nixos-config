@@ -30,6 +30,7 @@
     robo3t
     sbt
     tesseract4
+    vagrant
   ];
 }
 
