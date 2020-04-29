@@ -26,7 +26,7 @@ in
         lolcat
         toilet
 
-        _1password
+        unstable._1password
         bat
         bind
         broot
