@@ -206,7 +206,7 @@ in
       default = with pkgs; [
         firefox
         google-chrome
-        #qutebrowser # removed because of broken dependency
+        qutebrowser
         thunderbird
 
         # Messengers
