@@ -8,6 +8,7 @@
       ../../modules/docker.nix
       ../../modules/java.nix
       ../../modules/nspawn.nix
+      ../../projects/jbert.nix
     ];
 
   networking.hostName = "beteigeuze";
