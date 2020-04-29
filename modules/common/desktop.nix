@@ -49,7 +49,7 @@
       desktopManager.xterm.enable = false;
       windowManager.spectrwm.enable = true;
       displayManager.sessionCommands = ''
-        feh --bg-center --randomize /home/christian/Pictures/wallpapers
+        feh --bg-fill --randomize /home/christian/Pictures/wallpapers
       '';
 
       xautolock = {
