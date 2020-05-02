@@ -37,6 +37,11 @@
         "100:name *= 'i3lock'"
         "100:class_g *= 'Microsoft Teams'"
         "95:class_g = 'Alacritty' && focused"
+
+        # Exclude special Firefox/Thunderbird dropdowns.
+        # Ref: https://github.com/chjj/compton/issues/247
+        "class_g = 'Firefox' && argb"
+        "class_g = 'Thunderbird' && argb"
       ];
       shadow = true;
       shadowExclude = [
