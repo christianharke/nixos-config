@@ -2,7 +2,7 @@
 
 {
 
-  software.extra = [
+  environment.systemPackages = [
     pkgs.xorg.xbacklight
   ];
 

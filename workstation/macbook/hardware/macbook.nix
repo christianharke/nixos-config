@@ -11,7 +11,10 @@
 
   networking.wireless.enable = true;
 
-  programs.kbdlight.enable = true;
+  programs = {
+    light.enable = true;
+    kbdlight.enable = true;
+  };
 
   services = {
 
