@@ -2,8 +2,7 @@
 
 let
 
-  unstable = import <nixos-unstable> {};
-  java8 = unstable.openjdk8;
+  java8 = pkgs.openjdk8;
   
 in
 

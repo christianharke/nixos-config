@@ -5,7 +5,6 @@ with pkgs.lib;
 let
 
   v = import ../../nixversions.nix {};
-  unstable = import <nixos-unstable> { config = { allowUnfree = true; }; };
 
 in
 
@@ -26,7 +25,7 @@ in
         lolcat
         toilet
 
-        unstable._1password
+        v.pkgsUnstable._1password
         bat
         bind
         broot
@@ -253,8 +252,8 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         discord
-        lutris
-        steam
+        v.pkgsMaster.lutris
+        v.pkgsMaster.steam
         teamspeak_client
       ];
     };

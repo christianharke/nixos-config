@@ -4,13 +4,6 @@
 
 ### Manual steps
 
-#### Prepare channels
-
-```bash
-sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos-unstable
-sudo nix-channel --update nixos nixos-unstable
-```
-
 #### WPA supplicant config
 
 ```bash
