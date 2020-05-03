@@ -15,5 +15,11 @@
 
   software.dev = [];
 
-  services.xserver.xkbOptions = "caps:escape";
+  services.xserver = {
+    displayManager.lightdm.greeters.mini = {
+      enable = true;
+      user = "christian";
+    };
+    xkbOptions = "caps:escape";
+  };
 }
