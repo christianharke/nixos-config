@@ -51,8 +51,21 @@ in
           name = "vim";
           vimrcConfig = {
             packages.myplugins = with pkgs.vimPlugins; {
-              start = [ ranger-vim vim-css-color vimwiki ]; # load plugin on startup
-              opt = [ elm-vim vim-nix ];
+              # load plugin on startup
+              start = [
+                lightline-vim
+                ranger-vim
+                vim-css-color
+                vim-gitbranch
+                vim-gitgutter
+                vimagit
+                vimwiki
+              ];
+              # load plugin when necessary
+              opt = [
+                elm-vim
+                vim-nix
+              ];
             };
             customRC = ''
               " Save 1,000 items in history
@@ -165,6 +178,20 @@ in
               let nextcloud_notes.list_margin = 0
               let g:vimwiki_list = [nextcloud_notes]
               let g:vimwiki_dir_link = 'index'
+
+              " lightline
+              set laststatus=2
+              "set noshowmode " disabled since ranger-vim seems to break lightline sometimes
+              set shortmess+=F
+              let g:lightline = {
+                \ 'active': {
+                \   'left': [ [ 'mode', 'paste' ],
+                \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+                \ },
+                \ 'component_function': {
+                \   'gitbranch': 'gitbranch#name'
+                \ },
+                \ }
             '';
           };
         })
