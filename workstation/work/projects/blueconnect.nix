@@ -31,6 +31,7 @@
     sbt
     tesseract4
     vagrant
+    zip
   ];
 }
 
