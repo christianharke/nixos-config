@@ -9,6 +9,7 @@ let
 in
 
 {
+  imports = import ../../pkgs/modules.nix;
 
   options.software = {
 

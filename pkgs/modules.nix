@@ -1,0 +1,3 @@
+[
+  ./hinclient/module.nix
+]

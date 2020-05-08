@@ -15,6 +15,7 @@ in
       ../../modules/docker.nix
       ../../modules/java.nix
       ../../projects/jbert.nix
+      ./hinclient.nix
     ] ++ import ./projects;
 
   # Use the systemd-boot EFI boot loader.
