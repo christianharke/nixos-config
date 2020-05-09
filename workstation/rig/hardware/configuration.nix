@@ -14,22 +14,22 @@
   boot.extraModulePackages = [ ];
 
   boot.initrd.luks.devices.root = {
-    device = "/dev/sdc2";
+    device = "/dev/sdb2";
     preLVM = true;
   };
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/19c53ae6-9587-4a07-995c-32e143748d84";
+    { device = "/dev/disk/by-uuid/6545734a-4914-49fa-951e-4d851e21433e";
       fsType = "ext4";
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/52B5-D357";
+    { device = "/dev/disk/by-uuid/857E-AC68";
       fsType = "vfat";
     };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/7ad1f0f2-da90-48e0-9126-a6005d9b0b3e"; }
+    [ { device = "/dev/disk/by-uuid/f217a226-329a-45e2-9a84-75214974f253"; }
     ];
 
   nix.maxJobs = lib.mkDefault 8;
