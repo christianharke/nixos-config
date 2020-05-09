@@ -2,9 +2,14 @@
 
 {
 
-  environment.systemPackages = [
-    pkgs.xorg.xbacklight
-  ];
+  environment = {
+    systemPackages = [
+      pkgs.xorg.xbacklight
+    ];
+    variables = {
+      WINIT_X11_SCALE_FACTOR = "1";
+    };
+  };
 
   hardware = {
     cpu.intel.updateMicrocode = true;
