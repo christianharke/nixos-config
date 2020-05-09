@@ -280,8 +280,8 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         discord
-        v.pkgsMaster.lutris
-        v.pkgsMaster.steam
+        lutris
+        steam
         teamspeak_client
       ];
     };
