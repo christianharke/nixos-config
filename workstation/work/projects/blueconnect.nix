@@ -1,5 +1,11 @@
 { config, pkgs, ... }:
 
+let
+
+  v = import ../../../nixversions.nix {};
+
+in
+
 {
 
   imports =
@@ -25,6 +31,7 @@
     htmlunit-driver
     jetbrains.idea-ultimate
     mongodb
+    v.pkgs1903.mongodb-compass
     mongodb-tools
     nodePackages.grunt-cli
     robo3t
