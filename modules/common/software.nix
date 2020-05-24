@@ -44,6 +44,7 @@ in
         killall
         lazygit
         neofetch
+        parted exfat
         ranger
         samba
         stow
