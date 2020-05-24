@@ -101,7 +101,10 @@ in
   };
 
   software = {
-    gaming = [];
+    gaming = with pkgs; [
+      lutris
+      steam
+    ];
     extra = with pkgs; [
       openshift
       zoom-us
