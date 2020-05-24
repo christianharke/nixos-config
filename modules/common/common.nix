@@ -51,6 +51,12 @@
     options = automount_opts ++ auth_opts;
   in
   {
+    "${target}/backup" = {
+      device = "//${fileserver}/backup";
+      fsType = fsType;
+      options = options;
+    };
+
     "${target}/home" = {
       device = "//${fileserver}/home";
       fsType = fsType;
