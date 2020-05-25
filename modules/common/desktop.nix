@@ -18,6 +18,11 @@
     rofi # Necessary for fontawesome/unicode symbol finder
   ];
 
+  programs.xss-lock = {
+    enable = true;
+    lockerCommand = "/run/current-system/sw/bin/i3lock-pixeled";
+  };
+
   services = {
     autorandr.enable = true;
 
@@ -57,17 +62,6 @@
       displayManager.sessionCommands = ''
         feh --bg-fill --randomize /home/christian/Pictures/wallpapers
       '';
-
-      xautolock = {
-        enable = true;
-        enableNotifier = true;
-        extraOptions = [ "-detectsleep" ];
-        locker = "/run/current-system/sw/bin/i3lock-pixeled";
-        notifier = ''/run/current-system/sw/bin/notify-send "Locking in 10 seconds"'';
-        notify = 10;
-        nowlocker = "/run/current-system/sw/bin/i3lock-pixeled";
-        time = 10;
-      };
 
       serverFlagsSection = ''
           Option "BlankTime" "15"
