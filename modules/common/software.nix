@@ -251,6 +251,7 @@ in
         docker-ls
         elmPackages.elm
         freerdp
+        ghc
         jetbrains.idea-ultimate
         lazydocker
         lnav
