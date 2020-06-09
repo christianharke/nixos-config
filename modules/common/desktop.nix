@@ -32,6 +32,9 @@
       fadeDelta = 5;
       fadeExclude = [
         "window_type *= 'menu'"
+        #"class_g = 'Firefox' && window_type = 'utility'"
+        #"class_g = 'Thunderbird' && window_type = 'utility'"
+        "window_type = 'utility'"
       ];
       inactiveOpacity = "0.9";
       opacityRules = [
@@ -45,12 +48,16 @@
 
         # Exclude special Firefox/Thunderbird dropdowns.
         # Ref: https://github.com/chjj/compton/issues/247
-        "class_g = 'Firefox' && argb"
-        "class_g = 'Thunderbird' && argb"
+        #"100:class_g = 'Firefox' && argb"
+        #"100:class_g = 'Thunderbird' && argb"
+        "100:window_type = 'utility'"
       ];
       shadow = true;
       shadowExclude = [
         "window_type *= 'menu'"
+        #"class_g = 'Firefox' && window_type = 'utility'"
+        #"class_g = 'Thunderbird' && window_type = 'utility'"
+        "window_type = 'utility'"
       ];
     };
 
