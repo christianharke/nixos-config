@@ -9,7 +9,10 @@
     opengl.driSupport32Bit = true;
   };
 
-  services.xserver.videoDrivers = [
-    "nvidia"
-  ];
+  services.xserver = {
+    dpi = 96;
+    videoDrivers = [
+      "nvidia"
+    ];
+  };
 }
