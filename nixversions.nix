@@ -16,13 +16,13 @@ let
 
   nixpkgsUnstable = builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz";
-    sha256 = "03fjkzhrs2avcvdabgm7a65rnyjaqbqdnv4q86qyjkkwg64g5m8x";
+    sha256 = "14q3kvnmgz19pgwyq52gxx0cs90ddf24pnplmq33pdddbb6c51zn";
   };
   pkgsUnstable = import nixpkgsUnstable { config = { allowUnfree = true; }; };
 
   nixpkgsMaster = builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs/archive/master.tar.gz";
-    sha256 = "1dgchfy093v7nn7zqckaahbv2zb79b1wf66qzg15pxp5wn3xa9hc";
+    sha256 = "1nrkrbix97fcvqgp00195bz262i0zb03l1c8ih7jrr0iq9ynw321";
   };
   pkgsMaster = import nixpkgsMaster {
     config = {
