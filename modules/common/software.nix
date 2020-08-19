@@ -252,7 +252,7 @@ in
         elmPackages.elm
         freerdp
         ghc
-        jetbrains.idea-ultimate
+        v.pkgsUnstable.jetbrains.idea-ultimate
         lazydocker
         lnav
         nixops
