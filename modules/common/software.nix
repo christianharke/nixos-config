@@ -285,6 +285,7 @@ in
         lutris
         steam
         teamspeak_client
+        xboxdrv
       ];
     };
 
