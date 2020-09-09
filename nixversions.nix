@@ -16,7 +16,7 @@ let
 
   nixpkgsUnstable = builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs-channels/archive/nixos-unstable.tar.gz";
-    sha256 = "14q3kvnmgz19pgwyq52gxx0cs90ddf24pnplmq33pdddbb6c51zn";
+    sha256 = "1ak7jqx94fjhc68xh1lh35kh3w3ndbadprrb762qgvcfb8351x8v";
   };
   pkgsUnstable = import nixpkgsUnstable { config = { allowUnfree = true; }; };
 

@@ -282,7 +282,7 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         discord
-        lutris
+        v.pkgsUnstable.lutris
         steam
         teamspeak_client
         xboxdrv
