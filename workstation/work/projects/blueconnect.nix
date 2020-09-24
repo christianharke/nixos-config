@@ -33,6 +33,7 @@ in
     mongodb
     v.pkgs1903.mongodb-compass
     mongodb-tools
+    nodejs-12_x
     nodePackages.grunt-cli
     robo3t
     sbt

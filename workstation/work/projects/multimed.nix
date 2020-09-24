@@ -8,7 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     jetbrains.idea-ultimate
-    nodejs
+    nodejs-12_x
     sbt
   ];
 }
