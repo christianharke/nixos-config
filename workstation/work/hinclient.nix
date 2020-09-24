@@ -11,7 +11,7 @@ in
     enable = true;
     identities = acc.username;
     passphrase = acc.password;
-    keystore = /home/christian/.accounts/bluecare/hin/chrihar1.hin;
+    keystore = /home/christian/.accounts/bluecare/hin + "/${acc.username}.hin";
     httpProxyPort = 5016;
     clientapiPort = 5017;
     smtpProxyPort = 5018;
