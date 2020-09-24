@@ -2,7 +2,8 @@
 
 let
 
-  java8 = pkgs.openjdk8;
+  v = import ../nixversions.nix {};
+  java8 = v.pkgsUnstable.pkgs.openjdk8;
   
 in
 
