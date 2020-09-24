@@ -2,7 +2,7 @@
 
 let
 
-   acc = config.accounts."bluecare/ad";
+  acc = config.accounts."bluecare/ad";
 
 in
 
@@ -103,7 +103,6 @@ in
   software = {
     gaming = with pkgs; [
       lutris
-      steam
     ];
     extra = with pkgs; [
       openshift
