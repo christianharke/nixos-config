@@ -41,23 +41,23 @@
         "100:_NET_WM_STATE@:32a ~= '_NET_WM_STATE_MAXIMIZED_*'"
         "100:_NET_WM_STATE@:32a *= '_NET_WM_STATE_FULLSCREEN'"
         "100:fullscreen"
-        "100:class_g = 'dmenu'"
-        "100:name *= 'i3lock'"
-        "100:class_g *= 'Microsoft Teams'"
-        "95:class_g = 'Alacritty' && focused"
 
-        # Exclude special Firefox/Thunderbird dropdowns.
-        # Ref: https://github.com/chjj/compton/issues/247
-        #"100:class_g = 'Firefox' && argb"
-        #"100:class_g = 'Thunderbird' && argb"
-        "100:window_type = 'utility'"
+        # App specifics
+        "100:class_g = 'dmenu'"
+        "100:class_g *= 'Microsoft Teams'"
+        "100:name = 'as_toolbar'" # Zoom screen sharing toolbar
+        "100:name *= 'i3lock'"
+        "100:window_type = 'utility'" # Firefox/Thunderbird dropdowns
+        "95:class_g = 'Alacritty' && focused"
       ];
       shadow = true;
       shadowExclude = [
         "window_type *= 'menu'"
-        #"class_g = 'Firefox' && window_type = 'utility'"
-        #"class_g = 'Thunderbird' && window_type = 'utility'"
-        "window_type = 'utility'"
+
+        # App specifics
+        "name = 'as_toolbar'" # Zoom screen sharing toolbar
+        "name = 'cpt_frame_window'" # Zoom screen sharing frame
+        "window_type = 'utility'" # Firefox/Thunderbird dropdowns
       ];
     };
 
