@@ -3,6 +3,7 @@
 let
 
   acc = config.accounts."bluecare/ad";
+  v = import ../../nixversions.nix {};
 
 in
 
@@ -106,7 +107,7 @@ in
     ];
     extra = with pkgs; [
       openshift
-      zoom-us
+      v.pkgsUnstable.zoom-us
     ];
   };
 
