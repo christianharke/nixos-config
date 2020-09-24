@@ -132,7 +132,7 @@ in
     };
 
     openvpn.servers.bluecare = {
-      autoStart = true;
+      autoStart = false;
       config = "config /home/christian/.accounts/bluecare/ovpn/chr@vpfwblue.bluecare.ch.ovpn";
       updateResolvConf = true;
     };
