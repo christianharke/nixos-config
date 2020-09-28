@@ -7,6 +7,6 @@ let
 
     # Overriding
     i3lock-pixeled = callPackage ./i3lock-pixeled {};
-    spectrwm = p.pkgsUnstable.spectrwm;
+    spectrwm = callPackage ./spectrwm {};
   };
 in custom
