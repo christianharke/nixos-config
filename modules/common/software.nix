@@ -62,6 +62,7 @@ in
                 vim-css-color
                 vim-gitbranch
                 vim-gitgutter
+                vim-startify
                 vimagit
                 vimwiki
               ];
