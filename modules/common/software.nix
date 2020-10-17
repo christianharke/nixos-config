@@ -57,6 +57,7 @@ in
               start = [
                 fzf
                 lightline-vim
+                nerdcommenter
                 ranger-vim
                 vim-css-color
                 vim-gitbranch
