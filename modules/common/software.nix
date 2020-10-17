@@ -55,6 +55,7 @@ in
             packages.myplugins = with pkgs.vimPlugins; {
               # load plugin on startup
               start = [
+                fzf
                 lightline-vim
                 ranger-vim
                 vim-css-color
