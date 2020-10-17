@@ -60,6 +60,7 @@ in
                 nerdcommenter
                 ranger-vim
                 vim-css-color
+                vim-devicons
                 vim-gitbranch
                 vim-gitgutter
                 vim-startify
@@ -190,14 +191,36 @@ in
               "set noshowmode " disabled since ranger-vim seems to break lightline sometimes
               set shortmess+=F
               let g:lightline = {
-                \ 'active': {
-                \   'left': [ [ 'mode', 'paste' ],
-                \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-                \ },
-                \ 'component_function': {
-                \   'gitbranch': 'gitbranch#name'
-                \ },
-                \ }
+              \   'active': {
+              \     'left': [ [ 'mode', 'paste' ],
+              \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+              \   },
+              \   'tab': {
+              \     'active': [ 'filetype', 'filename', 'modified' ],
+              \     'inactive': [ 'filetype', 'filename', 'modified' ]
+              \   },
+              \   'component_function': {
+              \     'gitbranch': 'gitbranch#name',
+              \     'filetype': 'LightlineWebDevIconsFiletype',
+              \     'fileformat': 'LightlineWebDevIconsFileformat'
+              \   },
+              \   'tab_component_function': {
+              \     'filetype': 'LightlineTabWebDevIconsFiletype'
+              \   }
+              \ }
+
+              function! LightlineWebDevIconsFiletype()
+                return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : '''
+              endfunction
+
+              function! LightlineWebDevIconsFileformat()
+                return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : '''
+              endfunction
+
+              function! LightlineTabWebDevIconsFiletype(n)
+                let l:bufnr = tabpagebuflist(a:n)[tabpagewinnr(a:n) - 1]
+                return WebDevIconsGetFileTypeSymbol(bufname(l:bufnr))
+              endfunction
             '';
           };
         })
