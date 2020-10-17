@@ -63,6 +63,7 @@ in
                 vim-gitbranch
                 vim-gitgutter
                 vim-startify
+                vim-surround
                 vimagit
                 vimwiki
               ];
