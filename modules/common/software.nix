@@ -279,6 +279,7 @@ in
         elmPackages.elm
         freerdp
         ghc
+        glow
         v.pkgsUnstable.jetbrains.idea-ultimate
         lazydocker
         lnav
