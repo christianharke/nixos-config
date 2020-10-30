@@ -302,6 +302,8 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         libreoffice
+        pdfsandwich
+        pdftk
         sent # plaintext presentations
       ];
     };
