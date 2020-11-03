@@ -305,17 +305,6 @@ in
       ];
     };
 
-    gaming = mkOption {
-      type = types.listOf types.package;
-      default = with pkgs; [
-        discord
-        lutris
-        steam
-        teamspeak_client
-        xboxdrv
-      ];
-    };
-
     extra = mkOption {
       type = types.listOf types.package;
       default = [];
@@ -339,7 +328,6 @@ in
               config.software.web ++
               config.software.dev ++
               config.software.office ++
-              config.software.gaming ++
               config.software.extra;
       in
         builtins.filter ff all;

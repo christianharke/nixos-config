@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware
       ../../modules/common
+      ../../modules/gaming.nix
     ];
 
   # Use the systemd-boot EFI boot loader.

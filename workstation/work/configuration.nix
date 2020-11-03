@@ -101,11 +101,9 @@ in
   };
 
   software = {
-    gaming = with pkgs; [
-      lutris
-    ];
     extra = with pkgs; [
       freerdp
+      lutris
       openshift
       slack
       teams

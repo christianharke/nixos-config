@@ -6,7 +6,6 @@
   hardware = {
     cpu.intel.updateMicrocode = true;
     enableRedistributableFirmware = true;
-    opengl.driSupport32Bit = true;
   };
 
   services.xserver = {

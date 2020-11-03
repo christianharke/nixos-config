@@ -20,7 +20,6 @@
   services.xserver.xkbOptions = "caps:swapescape";
 
   software = {
-    gaming = [];
     extra = with pkgs; [
       dropbox-cli
     ];
