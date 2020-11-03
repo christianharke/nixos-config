@@ -105,7 +105,10 @@ in
       lutris
     ];
     extra = with pkgs; [
+      freerdp
       openshift
+      slack
+      teams
       zoom-us
     ];
   };

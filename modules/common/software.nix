@@ -274,11 +274,9 @@ in
     dev = mkOption {
       type = types.listOf types.package;
       default = with pkgs; [
-        ansible
         ascii
         docker-ls
         elmPackages.elm
-        freerdp
         ghc
         glow
         v.pkgsUnstable.jetbrains.idea-ultimate
@@ -286,8 +284,6 @@ in
         lnav
         nixops
         sbt
-        slack
-        teams
         tmuxinator tmux
         visualvm
         vscode
