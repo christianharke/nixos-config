@@ -27,6 +27,7 @@ in
         toilet
 
         v.pkgsUnstable._1password
+        v.pkgsUnstable._1password-gui
         bat
         bind
         broot
