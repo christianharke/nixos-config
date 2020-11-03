@@ -11,12 +11,13 @@ with pkgs.lib;
       discord
       lutris
       teamspeak_client
-      xboxdrv
     ];
   };
 
   config = {
     programs.steam.enable = true;
+
+    hardware.xpadneo.enable = true;
 
     environment.systemPackages =
       let
