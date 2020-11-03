@@ -38,7 +38,7 @@ in
     robo3t
     sbt
     tesseract4
-    vagrant
+    #vagrant
     zip
   ];
 }

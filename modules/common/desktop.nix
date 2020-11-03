@@ -36,7 +36,7 @@
         #"class_g = 'Thunderbird' && window_type = 'utility'"
         "window_type = 'utility'"
       ];
-      inactiveOpacity = "0.9";
+      inactiveOpacity = 0.9;
       opacityRules = [
         "100:_NET_WM_STATE@:32a ~= '_NET_WM_STATE_MAXIMIZED_*'"
         "100:_NET_WM_STATE@:32a *= '_NET_WM_STATE_FULLSCREEN'"
