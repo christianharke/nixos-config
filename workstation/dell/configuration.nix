@@ -5,8 +5,6 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       ../../modules/common
-      ../../modules/docker.nix
-      ../../modules/java.nix
     ];
 
   boot.loader.grub = {
