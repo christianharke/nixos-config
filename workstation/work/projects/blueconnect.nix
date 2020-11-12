@@ -24,7 +24,7 @@ in
   networking.firewall.allowedTCPPorts = [ 33000 ];
 
   environment.systemPackages = with pkgs; [
-    ansible
+    ansible_2_8
     chromedriver
     geckodriver
     groovy

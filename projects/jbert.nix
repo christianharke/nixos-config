@@ -17,7 +17,7 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    ansible
+    ansible_2_8
     cantata
     gradle
     jetbrains.idea-ultimate
