@@ -24,7 +24,6 @@
     dpi = 96;
     videoDrivers = [
       "nvidia"
-      "displaylink"
     ];
   };
 
