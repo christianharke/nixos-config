@@ -13,10 +13,6 @@
 
   networking.hostName = "beteigeuze";
 
-  fonts.fonts = with pkgs; [
-    google-fonts
-  ];
-
   services.xserver.xkbOptions = "caps:swapescape";
 
   software = {

@@ -36,7 +36,10 @@
   };
 
   fonts = {
-    fonts = [ pkgs.corefonts ];
+    fonts = with pkgs; [
+      corefonts
+      google-fonts
+    ];
     enableFontDir = true;
   };
 
