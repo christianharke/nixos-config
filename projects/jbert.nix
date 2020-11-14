@@ -15,14 +15,5 @@
   users.users.christian.extraGroups = [
     "audio"
   ];
-
-  environment.systemPackages = with pkgs; [
-    ansible_2_8
-    cantata
-    gradle
-    jetbrains.idea-ultimate
-    micronaut
-    mpc_cli
-  ];
 }
 
