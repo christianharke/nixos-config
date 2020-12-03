@@ -16,7 +16,7 @@ let
 
   nixpkgs2003 = builtins.fetchTarball {
     url = "https://github.com/NixOS/nixpkgs-channels/archive/nixos-20.03.tar.gz";
-    sha256 = "0641vvn95d6hj4h4pvgzyd62bxbr1wz7gp6lvnzzk046sq96n9xd";
+    sha256 = "117ir2ysw310q87mndv6czph5qjbhvggmhawcvak6x507yf0dxin";
   };
   pkgs2003 = import nixpkgs2003 { config = { allowUnfree = true; }; };
 
