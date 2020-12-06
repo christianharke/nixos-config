@@ -59,12 +59,6 @@ in
       options = options;
     };
 
-    "${target}/ressourcenplanung" = {
-      device = "//${fileserver}/bc_fuehrung$/04a_Fuehrungskader/03_Ressourcenplanung/Public";
-      fsType = fsType;
-      options = options;
-    };
-
     "${target}/transfer" = {
       device = "//${fileserver}/transfer";
       fsType = fsType;
