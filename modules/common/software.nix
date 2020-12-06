@@ -27,7 +27,7 @@ in
         toilet
 
         v.pkgsUnstable._1password
-        v.pkgsUnstable._1password-gui
+        _1password-gui
         bat
         bind
         broot
@@ -187,6 +187,19 @@ in
               let nextcloud_notes.list_margin = 0
               let g:vimwiki_list = [nextcloud_notes]
               let g:vimwiki_dir_link = 'index'
+
+              function! VimwikiFindIncompleteTasks()
+                lvimgrep /- \[ \]/ %:p
+                lopen
+              endfunction
+
+              function! VimwikiFindAllIncompleteTasks()
+                VimwikiSearch /- \[ \]/
+                lopen
+              endfunction
+
+              nmap <Leader>wa :call VimwikiFindAllIncompleteTasks()<CR>
+              nmap <Leader>wx :call VimwikiFindIncompleteTasks()<CR>
 
               " lightline
               set laststatus=2
