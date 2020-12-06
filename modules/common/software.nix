@@ -48,6 +48,7 @@ in
         parted exfat
         ranger
         samba
+        starship
         stow
         unzip
         (vim_configurable.customize {
