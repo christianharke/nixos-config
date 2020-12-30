@@ -201,8 +201,8 @@ in
                 lopen
               endfunction
 
-              nmap <Leader>wa :call VimwikiFindAllIncompleteTasks()<CR>
-              nmap <Leader>wx :call VimwikiFindIncompleteTasks()<CR>
+              :autocmd FileType vimwiki map wa :call VimwikiFindAllIncompleteTasks()<CR>
+              :autocmd FileType vimwiki map wx :call VimwikiFindIncompleteTasks()<CR>
 
               " lightline
               set laststatus=2
