@@ -68,7 +68,7 @@ in
                 vim-startify
                 vim-surround
                 vimagit
-                vimwiki
+                vimwiki mattn-calendar-vim
               ];
               # load plugin when necessary
               opt = [
@@ -203,6 +203,21 @@ in
 
               :autocmd FileType vimwiki map wa :call VimwikiFindAllIncompleteTasks()<CR>
               :autocmd FileType vimwiki map wx :call VimwikiFindIncompleteTasks()<CR>
+
+              function! ToggleCalendar()
+                execute ":Calendar"
+                if exists("g:calendar_open")
+                  if g:calendar_open == 1
+                    execute "q"
+                    unlet g:calendar_open
+                  else
+                    g:calendar_open = 1
+                  end
+                else
+                  let g:calendar_open = 1
+                end
+              endfunction
+              :autocmd FileType vimwiki map <leader>c :call ToggleCalendar()<CR>
 
               " lightline
               set laststatus=2
