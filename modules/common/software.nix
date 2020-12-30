@@ -130,6 +130,9 @@ in
               " KEYMAPS
               "
 
+              " Remap leader key
+              let mapleader = ","
+
               " Open terminal inside vim
               map <Leader>tt :terminal<CR>
               map <Leader>tv :vertical terminal<CR>
