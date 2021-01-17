@@ -126,6 +126,7 @@ in
               set shiftwidth=4
               set tabstop=4
 
+
               "
               " KEYMAPS
               "
@@ -162,6 +163,16 @@ in
               " Easily create HTML unorded lists.
               map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
               map <F4> <Esc>o<li></li><Esc>cit
+
+
+              "
+              " TEMPLATES
+              "
+              if has("autocmd")
+                augroup templates
+                  autocmd BufNewFile *.sh 0r ~/.config/vim/templates/skeleton.sh
+                augroup END
+              endif
 
 
               "
