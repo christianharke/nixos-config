@@ -318,12 +318,10 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         ascii
-        docker-ls
         elmPackages.elm
         ghc
         glow
         v.pkgsUnstable.jetbrains.idea-ultimate
-        lazydocker
         lnav
         nixops
         sbt

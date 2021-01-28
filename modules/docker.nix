@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     docker-compose
     docker-ls
+    lazydocker
   ];
 
   virtualisation.docker = {
