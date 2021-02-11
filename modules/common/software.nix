@@ -50,6 +50,7 @@ in
         samba
         starship
         stow
+        trash-cli
         unzip
         (vim_configurable.customize {
           name = "vim";
