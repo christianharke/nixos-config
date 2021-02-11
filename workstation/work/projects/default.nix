@@ -1,4 +1,3 @@
 [
   ./blueconnect.nix
-  ./multimed.nix
 ]

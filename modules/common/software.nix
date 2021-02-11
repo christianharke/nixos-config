@@ -321,15 +321,11 @@ in
       default = with pkgs; [
         ascii
         direnv
-        elmPackages.elm
-        ghc
         glow
         v.pkgsUnstable.jetbrains.idea-ultimate
         lnav
         nixops
-        sbt
         tmuxinator tmux
-        visualvm
         vscode
 
         # REPLs
