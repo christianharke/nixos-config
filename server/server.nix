@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
 
       # Include role configuration
-      # /root/nixos-config/roles/docker.nix
+      ../modules/container.nix
     ];
 
   # Use the GRUB 2 boot loader.

@@ -12,7 +12,7 @@ in
       ./hardware
       ../../modules/cli-office.nix
       ../../modules/common
-      ../../modules/docker.nix
+      ../../modules/container.nix
       ../../modules/java.nix
       ../../projects/jbert.nix
       ./hinclient.nix
