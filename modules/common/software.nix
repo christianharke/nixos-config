@@ -320,7 +320,6 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         ascii
-        direnv
         glow
         v.pkgsUnstable.jetbrains.idea-ultimate
         lnav

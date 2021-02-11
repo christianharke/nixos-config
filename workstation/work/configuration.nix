@@ -13,6 +13,7 @@ in
       ../../modules/cli-office.nix
       ../../modules/common
       ../../modules/container.nix
+      ../../modules/direnv.nix
       ../../modules/java.nix
       ../../projects/jbert.nix
       ./hinclient.nix
