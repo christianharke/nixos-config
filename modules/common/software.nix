@@ -58,6 +58,7 @@ in
             packages.myplugins = with pkgs.vimPlugins; {
               # load plugin on startup
               start = [
+                direnv
                 fzf
                 lightline-vim
                 nerdcommenter
@@ -319,6 +320,7 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         ascii
+        direnv
         elmPackages.elm
         ghc
         glow
