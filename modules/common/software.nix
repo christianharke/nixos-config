@@ -32,12 +32,14 @@ in
         bind
         broot
         convmv
+        direnv
         eva
         exa
         fd # ultra-fast find
         file
         fzf # fuzzy find
         git
+        glow
         gnupg
         gron
         htop
@@ -320,8 +322,6 @@ in
       type = types.listOf types.package;
       default = with pkgs; [
         ascii
-        direnv
-        glow
         v.pkgsUnstable.jetbrains.idea-ultimate
         lnav
         nixops
