@@ -251,6 +251,8 @@ in
               endfunction
               :autocmd FileType vimwiki map <leader>c :call ToggleCalendar()<CR>
 
+              au BufNewFile ~/Nextcloud/Notes/diary/*.txt :silent 0r !~/.vim/bin/generate-vimwiki-diary-template.py '%'
+
               " lightline
               set laststatus=2
               "set noshowmode " disabled since ranger-vim seems to break lightline sometimes
