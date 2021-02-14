@@ -165,9 +165,8 @@ in
               " Removes pipes | that act as seperators on splits
               set fillchars+=vert:\ 
 
-              " Easily create HTML unorded lists.
-              map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>I</ul><Esc>kcit
-              map <F4> <Esc>o<li></li><Esc>cit
+              " Insert shebang at the beginning
+              map <F2> <Esc>ggO#!/usr/bin/env 
 
 
               "
