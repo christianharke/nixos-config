@@ -191,7 +191,7 @@ in
               "
               if has("autocmd")
                 augroup templates
-                  autocmd BufNewFile *.sh 0r ~/.config/vim/templates/skeleton.sh
+                  autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
                 augroup END
               endif
 
