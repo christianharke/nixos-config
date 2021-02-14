@@ -67,11 +67,9 @@ in
                 ranger-vim
                 vim-css-color
                 vim-devicons
-                vim-gitbranch
-                vim-gitgutter
+                vim-fugitive
                 vim-startify
                 vim-surround
-                vimagit
                 vimwiki mattn-calendar-vim
               ];
               # load plugin when necessary
@@ -248,7 +246,7 @@ in
               \     'inactive': [ 'filetype', 'filename', 'modified' ]
               \   },
               \   'component_function': {
-              \     'gitbranch': 'gitbranch#name',
+              \     'gitbranch': 'FugitiveHead',
               \     'filetype': 'LightlineWebDevIconsFiletype',
               \     'fileformat': 'LightlineWebDevIconsFileformat'
               \   },
