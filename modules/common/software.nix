@@ -109,6 +109,9 @@ in
               " Turn on line numbering
               set number
 
+              " Enable relative line numbers
+              set relativenumber
+
               " Don't line wrap mid-word.
               set linebreak
 
