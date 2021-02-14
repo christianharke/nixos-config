@@ -170,6 +170,23 @@ in
 
 
               "
+              " MARKDOWN
+              "
+
+              " Treat all .md files as markdown
+              autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+              " Set spell check to British English
+              autocmd FileType markdown setlocal spell spelllang=en_gb
+
+              " Set text width
+              autocmd FileType markdown setlocal textwidth=100
+
+              " Treat fenced languages as such
+              let g:markdown_fenced_languages = ['bash=sh', 'sh', 'html', 'groovy', 'java', 'js=javascript', 'python', 'rust', 'vim']
+
+
+              "
               " TEMPLATES
               "
               if has("autocmd")
