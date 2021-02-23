@@ -26,15 +26,18 @@ in
         lolcat
         toilet
 
+        # GNU util replacements
+        bat
+        exa
+        ripgrep
+
         v.pkgsUnstable._1password
         _1password-gui
-        bat
         bind
         broot
         convmv
         direnv
         eva
-        exa
         fd # ultra-fast find
         file
         fzf # fuzzy find
