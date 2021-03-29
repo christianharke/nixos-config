@@ -8,9 +8,18 @@ with pkgs.lib;
   options.software.gaming = mkOption {
     type = types.listOf types.package;
     default = with pkgs; [
+      # Comms
       discord
-      lutris
       teamspeak_client
+
+      # Game libs
+      lutris
+
+      # Games
+      superTux
+      superTuxKart
+      wesnoth
+      zeroad
     ];
   };
 
