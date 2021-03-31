@@ -23,6 +23,9 @@ in
       JDK_HOME = "${java}/lib/openjdk";
       JDK8_HOME = "${java8}/lib/openjdk";
       JDK11_HOME = "${java11}/lib/openjdk";
+
+      # IntelliJ IDEA Code with me
+      INTELLIJCLIENT_JDK =  "${java11}/lib/openjdk";
     };
   };
 }
