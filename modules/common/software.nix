@@ -329,6 +329,8 @@ in
     web = mkOption {
       type = types.listOf types.package;
       default = with pkgs; [
+        wget
+
         firefox
         google-chrome
         qutebrowser
