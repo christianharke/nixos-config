@@ -23,6 +23,21 @@
     lockerCommand = "/run/current-system/sw/bin/i3lock-pixeled";
   };
 
+  systemd.user = {
+    services = {
+      dunst = {
+        description = "Dunst notification daemon";
+        documentation = [ "man:dunst(1)" ];
+        partOf = [ "graphical-session.target" ];
+        serviceConfig = {
+          Type = "dbus";
+          BusName = "org.freedesktop.Notifications";
+          ExecStart = "${pkgs.dunst}/bin/dunst";
+        };
+      };
+    };
+  };
+
   services = {
     autorandr.enable = true;
 
