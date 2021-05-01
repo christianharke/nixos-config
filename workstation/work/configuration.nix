@@ -14,6 +14,7 @@ in
       ../../modules/common
       ../../modules/container.nix
       ../../modules/java.nix
+      ../../modules/mobile.nix
       ../../projects/jbert.nix
       ./hinclient.nix
     ] ++ import ./projects;
