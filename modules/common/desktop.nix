@@ -20,7 +20,7 @@
 
   programs.xss-lock = {
     enable = true;
-    lockerCommand = "/run/current-system/sw/bin/i3lock-pixeled";
+    lockerCommand = "${pkgs.i3lock-pixeled}/bin/i3lock-pixeled";
   };
 
   systemd.user = {
