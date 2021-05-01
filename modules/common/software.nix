@@ -305,6 +305,7 @@ in
         peek gifski
         scrot
         xclip
+        xzoom
       ];
     };
 
