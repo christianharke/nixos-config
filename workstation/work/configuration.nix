@@ -99,7 +99,6 @@ in
     extra = with pkgs; [
       freerdp
       lutris
-      openshift
       slack
       teams
       zoom-us
