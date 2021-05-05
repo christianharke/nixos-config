@@ -20,11 +20,15 @@
 
   nix.maxJobs = lib.mkOverride 20 6;
 
-  services.xserver = {
-    dpi = 96;
-    videoDrivers = [
-      "nvidia"
-    ];
+  services = {
+    logind.lidSwitch = "suspend-then-hibernate";
+
+    xserver = {
+      dpi = 96;
+      videoDrivers = [
+        "nvidia"
+      ];
+    };
   };
 
 }
