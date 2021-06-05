@@ -48,6 +48,12 @@ in
       options = options;
     };
 
+    "${target}/bc_produkte_und_systeme$" = {
+      device = "//${fileserver}/bc_produkte_und_systeme$";
+      fsType = fsType;
+      options = options;
+    };
+
     "${target}/bc_bereiche" = {
       device = "//${fileserver}/bc_bereiche$";
       fsType = fsType;
