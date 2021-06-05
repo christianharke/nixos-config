@@ -36,7 +36,8 @@ in
 
   boot = {
     cleanTmpDir = true;
-    extraModulePackages = [ config.boot.kernelPackages.exfat-nofuse ];
+    # disabled since broken
+    #extraModulePackages = [ config.boot.kernelPackages.exfat-nofuse ];
   };
 
   security.sudo.extraConfig = ''
@@ -58,7 +59,7 @@ in
       corefonts
       google-fonts
     ];
-    enableFontDir = true;
+    fontDir.enable = true;
   };
 
   fileSystems =
@@ -119,6 +120,6 @@ in
     # compatible, in order to avoid breaking some software such as database
     # servers. You should change this only after NixOS release notes say you
     # should.
-    stateVersion = "20.03"; # Did you read the comment?
+    stateVersion = "21.05"; # Did you read the comment?
   };
 }

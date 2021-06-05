@@ -28,7 +28,7 @@ stdenv.mkDerivation {
 
   makeFlags = [ "PREFIX=${placeholder "out"}" ];
 
-  meta = with stdenv.lib; {
+  meta = with pkgs.lib; {
     description = "A tiling window manager";
     homepage    = "https://github.com/conformal/spectrwm";
     maintainers = with maintainers; [ jb55 ];
