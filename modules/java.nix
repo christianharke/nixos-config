@@ -5,6 +5,7 @@ let
   java = pkgs.jdk;
   java8 = pkgs.jdk8;
   java11 = pkgs.jdk11;
+  jfx11 = pkgs.openjfx11;
   
 in
 
@@ -14,6 +15,7 @@ in
       java
       java8
       java11
+      jfx11
     ];
 
     variables = {
