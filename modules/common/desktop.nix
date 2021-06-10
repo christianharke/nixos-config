@@ -59,7 +59,7 @@
         "100:name = 'as_toolbar'" # Zoom screen sharing toolbar
         "100:name *= 'i3lock'"
         "100:window_type = 'utility'" # Firefox/Thunderbird dropdowns
-        "95:class_g = 'Alacritty' && focused"
+        "100:class_g = 'Alacritty' && focused"
       ];
       shadow = true;
       shadowExclude = [
