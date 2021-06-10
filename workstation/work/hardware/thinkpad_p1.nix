@@ -16,7 +16,10 @@
     enableRedistributableFirmware = true;
   };
 
-  networking.wireless.enable = true;
+  networking.wireless = {
+    enable = true;
+    interfaces = [ "wlp82s0" ];
+  };
 
   nix.maxJobs = lib.mkOverride 20 6;
 
