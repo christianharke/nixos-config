@@ -8,7 +8,7 @@ in
 
 {
   services.hinclient = {
-    enable = true;
+    enable = false;
     identities = acc.username;
     passphrase = acc.password;
     keystore = /home/christian/.accounts/bluecare/hin + "/${acc.username}.hin";
