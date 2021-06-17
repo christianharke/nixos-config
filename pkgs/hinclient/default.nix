@@ -17,5 +17,7 @@ stdenv.mkDerivation rec {
     mkdir -p $out
     mv * $out
     mv .install4j $out
+    mkdir -p $out/bin
+    ln -sT $out/hinclient $out/bin/hinclient
   '';
 }
