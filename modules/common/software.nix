@@ -203,6 +203,43 @@ in
               " PLUGINS
               "
 
+
+              " lightline
+              set laststatus=2
+              "set noshowmode " disabled since ranger-vim seems to break lightline sometimes
+              set shortmess+=F
+              let g:lightline = {
+              \   'active': {
+              \     'left': [ [ 'mode', 'paste' ],
+              \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+              \   },
+              \   'tab': {
+              \     'active': [ 'filetype', 'filename', 'modified' ],
+              \     'inactive': [ 'filetype', 'filename', 'modified' ]
+              \   },
+              \   'component_function': {
+              \     'gitbranch': 'FugitiveHead',
+              \     'filetype': 'LightlineWebDevIconsFiletype',
+              \     'fileformat': 'LightlineWebDevIconsFileformat'
+              \   },
+              \   'tab_component_function': {
+              \     'filetype': 'LightlineTabWebDevIconsFiletype'
+              \   }
+              \ }
+
+              function! LightlineWebDevIconsFiletype()
+                return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : '''
+              endfunction
+
+              function! LightlineWebDevIconsFileformat()
+                return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : '''
+              endfunction
+
+              function! LightlineTabWebDevIconsFiletype(n)
+                let l:bufnr = tabpagebuflist(a:n)[tabpagewinnr(a:n) - 1]
+                return WebDevIconsGetFileTypeSymbol(bufname(l:bufnr))
+              endfunction
+
               " ranger
               map <leader>rr :RangerEdit<cr>
               map <leader>rv :RangerVSplit<cr>
@@ -255,42 +292,6 @@ in
               :autocmd FileType vimwiki map <leader>c :call ToggleCalendar()<CR>
 
               au BufNewFile ~/Nextcloud/Notes/diary/*.txt :silent 0r !~/.vim/bin/generate-vimwiki-diary-template.py '%'
-
-              " lightline
-              set laststatus=2
-              "set noshowmode " disabled since ranger-vim seems to break lightline sometimes
-              set shortmess+=F
-              let g:lightline = {
-              \   'active': {
-              \     'left': [ [ 'mode', 'paste' ],
-              \               [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-              \   },
-              \   'tab': {
-              \     'active': [ 'filetype', 'filename', 'modified' ],
-              \     'inactive': [ 'filetype', 'filename', 'modified' ]
-              \   },
-              \   'component_function': {
-              \     'gitbranch': 'FugitiveHead',
-              \     'filetype': 'LightlineWebDevIconsFiletype',
-              \     'fileformat': 'LightlineWebDevIconsFileformat'
-              \   },
-              \   'tab_component_function': {
-              \     'filetype': 'LightlineTabWebDevIconsFiletype'
-              \   }
-              \ }
-
-              function! LightlineWebDevIconsFiletype()
-                return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : '''
-              endfunction
-
-              function! LightlineWebDevIconsFileformat()
-                return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : '''
-              endfunction
-
-              function! LightlineTabWebDevIconsFiletype(n)
-                let l:bufnr = tabpagebuflist(a:n)[tabpagewinnr(a:n) - 1]
-                return WebDevIconsGetFileTypeSymbol(bufname(l:bufnr))
-              endfunction
             '';
           };
         })
